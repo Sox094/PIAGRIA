@@ -38,7 +38,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'font-awesome-sass'
 
 gem 'devise'
-gem 'devise-i18n' 
+gem 'devise-i18n'
+gem 'rails-i18n'
+gem 'toastr-rails'
+
 
 
 group :development, :test do
