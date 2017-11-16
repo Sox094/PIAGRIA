@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :forms
+  
+  
+  validates :nom, presence: true, length: {maximum: 65}
+  validates :prenom, presence: true, length: {maximum: 65}
+  validates :entreprise, presence: true, length: {maximum: 65}
+  validates :fonction, presence: true, length: {maximum: 65}
+  
 end
