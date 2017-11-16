@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   
-  resources :rooms
+  resources :users, only: [:show]
+  resources :forms
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
