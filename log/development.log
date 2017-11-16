@@ -1,0 +1,1512 @@
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+  [1m [35mActiveRecord::SchemaMigration Load (0.1ms) [0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m [36m (0.1ms) [0m   [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+[0m
+  [1m [35m (0.1ms) [0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m [36m (0.1ms) [0m   [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 12:26:57 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered shared/_message.html.erb (0.7ms)
+Completed 200 OK in 431ms (Views: 419.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-31da4d1c31b0360453c84bfe8aa200d4ee815c16c3d0d4cf263e640dc3c399bd.css?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/toastr.self-cd4d0b085c13a2d904a1272152dc0645a9261e6ca5cfc429a786b3e6465406df.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-2e918156b01ac80685e299854854686385c7faaacd0339612a33b74ee629ab6a.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:58 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:59 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 194.214.171.28 at 2017-11-16 12:26:59 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 194.214.171.28 at 2017-11-16 12:26:59 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/agria-c49b5a6842f009bb77fc3461d1e7fc0b9fede96b25f2a7a0e000c89341fc39b4.ico" for 194.214.171.28 at 2017-11-16 12:26:59 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 12:27:04 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (7.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 156.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 194.214.171.28 at 2017-11-16 12:27:11 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+  [1m [36mUser Load (1.9ms) [0m   [1mSELECT "users".* FROM "users" [0m
+
+
+Started POST "/login" for 194.214.171.28 at 2017-11-16 12:28:31 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VkWkpPMWst8da8201KMRUhN4y8+t8dz5JXR2B53d6rnctkWz5y+crEwYTnL5wR+ffC7whxgFfBC9RkrEsbOP2A==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Connexion"}
+  [1m [35mUser Load (0.5ms) [0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@gmail.com"]]
+  [1m [36m (0.1ms) [0m   [1mbegin transaction [0m
+  [1m [35mSQL (0.5ms) [0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_created_at", "2017-11-16 12:28:32.110662"], ["updated_at", "2017-11-16 12:28:32.111790"], ["id", 1]]
+  [1m [36m (13.3ms) [0m   [1mcommit transaction [0m
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.4ms) [0m   [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ? [0m  [["last_sign_in_at", "2017-11-13 16:10:42.178331"], ["current_sign_in_at", "2017-11-16 12:28:32.129968"], ["sign_in_count", 7], ["updated_at", "2017-11-16 12:28:32.131177"], ["id", 1]]
+  [1m [35m (9.0ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 741ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 12:28:33 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  [1m [36mUser Load (0.3ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 1]]
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+  [1m [35mForm Load (0.3ms) [0m  SELECT "forms".* FROM "forms"
+  [1m [36mForm Load (0.3ms) [0m   [1mSELECT "forms".* FROM "forms" [0m
+  [1m [35mForm Load (0.3ms) [0m  SELECT "forms".* FROM "forms"
+  [1m [36mForm Load (1.7ms) [0m   [1mSELECT "forms".* FROM "forms" [0m
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 12:38:04 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  [1m [35mUser Load (0.2ms) [0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+  [1m [36mUser Load (2.0ms) [0m   [1mSELECT "users".* FROM "users" [0m
+
+
+Started DELETE "/logout" for 194.214.171.28 at 2017-11-16 12:43:13 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DYdglyXNi++dTNpjfFJnnGoo/MP47/tJ+5sZdD01UnDIcr4HodPy67NzwN8NDwolv34UGaWuU+snAbW38EmM7Q=="}
+  [1m [36mUser Load (0.2ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 1]]
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.2ms) [0m   [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ? [0m  [["remember_created_at", nil], ["updated_at", "2017-11-16 12:43:13.137391"], ["id", 1]]
+  [1m [35m (11.0ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 16ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 12:43:13 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 12:43:19 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (0.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 12:43:21 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VKOaDIxxrOaJsggnC2pGVJG/g511zNTQat7BcQWXa6UFJzrOhovVI0YIsl5gz+UB8AmLJl9yteuJscoyWwAeg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m [36m (0.1ms) [0m   [1mbegin transaction [0m
+  [1m [35m (0.1ms) [0m  rollback transaction
+  Rendered shared/_devise_errors.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+  [1m [35mUser Load (0.5ms) [0m  SELECT "users".* FROM "users"
+  [1m [36mForm Load (0.3ms) [0m   [1mSELECT "forms".* FROM "forms" [0m
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.1ms) [0m   [1mrollback transaction [0m
+  [1m [36mUser Load (1.9ms) [0m   [1mSELECT "users".* FROM "users" [0m
+  [1m [35mForm Load (0.3ms) [0m  SELECT "forms".* FROM "forms"
+  [1m [36mUser Load (1.8ms) [0m   [1mSELECT "users".* FROM "users" [0m
+  [1m [35mUser Load (0.3ms) [0m  SELECT "users".* FROM "users"
+  [1m [36mUser Load (1.9ms) [0m   [1mSELECT "users".* FROM "users" [0m
+  [1m [35mUser Load (0.4ms) [0m  SELECT "users".* FROM "users"
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Migrating to AddAttributsToUser (20171116130621)
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.4ms) [0m   [1mALTER TABLE "users" ADD "nom" varchar [0m
+  [1m [35m (0.2ms) [0m  ALTER TABLE "users" ADD "prenom" varchar
+  [1m [36m (0.1ms) [0m   [1mALTER TABLE "users" ADD "entreprise" varchar [0m
+  [1m [35m (0.1ms) [0m  ALTER TABLE "users" ADD "fonction" varchar
+  [1m [36mSQL (0.2ms) [0m   [1mINSERT INTO "schema_migrations" ("version") VALUES (?) [0m  [["version", "20171116130621"]]
+  [1m [35m (7.8ms) [0m  commit transaction
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+  [1m [35m (0.1ms) [0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+
+  [1m [36m (0.1ms) [0m   [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m [35m (0.1ms) [0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m [36mUser Load (1.9ms) [0m   [1mSELECT "users".* FROM "users" [0m
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:16:44 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VKOaDIxxrOaJsggnC2pGVJG/g511zNTQat7BcQWXa6UFJzrOhovVI0YIsl5gz+UB8AmLJl9yteuJscoyWwAeg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.1ms) [0m   [1mrollback transaction [0m
+  Rendered shared/_devise_errors.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.5ms)
+Completed 200 OK in 990ms (Views: 488.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:19:14 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VKOaDIxxrOaJsggnC2pGVJG/g511zNTQat7BcQWXa6UFJzrOhovVI0YIsl5gz+UB8AmLJl9yteuJscoyWwAeg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.1ms) [0m   [1mrollback transaction [0m
+  Rendered shared/_devise_errors.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:20:59 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VKOaDIxxrOaJsggnC2pGVJG/g511zNTQat7BcQWXa6UFJzrOhovVI0YIsl5gz+UB8AmLJl9yteuJscoyWwAeg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.1ms) [0m   [1mrollback transaction [0m
+  Rendered shared/_devise_errors.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:21:19 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SzyJZa3Ck+UmWljXFAnf0PmanOlw+ol8oT0/ug3ut1QGepvmpel6AjFksj7xp0ldrBxEy5xQcPhOsIOXAJTqgA==", "user"=>{"nom"=>"chouder", "prenom"=>"sofian", "entreprise"=>"Tncy", "fonction"=>"PDG2", "email"=>"hh@hotmail.fr", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+Unpermitted parameters: nom, prenom, entreprise, fonction
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mUser Exists (0.2ms) [0m   [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'hh@hotmail.fr' LIMIT 1 [0m
+  [1m [35mSQL (0.4ms) [0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "hh@hotmail.fr"], ["encrypted_password", "$2a$11$2KALEeiq7LieHbPW969xYeLYIh9indBYUXIfl8QuBAHQPxcyucOzm"], ["created_at", "2017-11-16 13:21:19.575011"], ["updated_at", "2017-11-16 13:21:19.575011"]]
+  [1m [36m (10.4ms) [0m   [1mcommit transaction [0m
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.4ms) [0m   [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ? [0m  [["last_sign_in_at", "2017-11-16 13:21:19.588261"], ["current_sign_in_at", "2017-11-16 13:21:19.588261"], ["last_sign_in_ip", "194.214.171.28"], ["current_sign_in_ip", "194.214.171.28"], ["sign_in_count", 1], ["updated_at", "2017-11-16 13:21:19.589335"], ["id", 3]]
+  [1m [35m (11.7ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 230ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:21:20 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m [36mUser Load (0.3ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 3]]
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+  [1m [36mUser Load (1.8ms) [0m   [1mSELECT "users".* FROM "users" [0m
+  [1m [35mUser Load (0.3ms) [0m  SELECT "users".* FROM "users"
+
+
+Started DELETE "/logout" for 194.214.171.28 at 2017-11-16 13:23:42 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m [36mActiveRecord::SchemaMigration Load (0.1ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"51Ca/qiOjzvhAqHfq4RpiQX+V2n8RD57wSfcxoii/HiqFoh9oKVm3PY8SzZOKv8EUHiPSxDux/8uqmDrhdihrA=="}
+  [1m [35mUser Load (0.3ms) [0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m [36m (0.1ms) [0m   [1mbegin transaction [0m
+  [1m [35m (0.1ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 466ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:23:47 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered shared/_message.html.erb (0.6ms)
+Completed 200 OK in 496ms (Views: 495.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 13:24:12 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:24:38 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c25+O5jY2wmuJKcyJYBdo/H7Z7SMAaZu9y5Fsbex0nDF7gxK6vP0KEZ7mx1l5PkG4ps/eKgPfRd62CF+g0dHMA==", "user"=>{"nom"=>"alpha", "prenom"=>"beta", "entreprise"=>"gamma", "fonction"=>"hh", "email"=>"zzz@gmail.fr", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+Unpermitted parameters: nom, prenom, entreprise, fonction
+  [1m [36m (0.1ms) [0m   [1mbegin transaction [0m
+  [1m [35mUser Exists (0.2ms) [0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'zzz@gmail.fr' LIMIT 1
+  [1m [36m (0.1ms) [0m   [1mrollback transaction [0m
+  Rendered shared/_devise_errors.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 228ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:25:01 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrrdnOWD8o2qmE2sQVVmfnlBFnDMQErX44AT1XIrU8vUOq/tl6jdrELHcYMBMcLbaiFOvOhOka5udncaRt3Giw==", "user"=>{"nom"=>"zzz", "prenom"=>"zzz", "entreprise"=>"zzz", "fonction"=>"zzz", "email"=>"zzz@gmail.fr", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+Unpermitted parameters: nom, prenom, entreprise, fonction
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mUser Exists (0.2ms) [0m   [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'zzz@gmail.fr' LIMIT 1 [0m
+  [1m [35mSQL (0.4ms) [0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "zzz@gmail.fr"], ["encrypted_password", "$2a$11$NLo9aOVVubvFHQ79UaV9NOwY6l41ivHb3Eas/uJDM5YUx005wLbWK"], ["created_at", "2017-11-16 13:25:01.892282"], ["updated_at", "2017-11-16 13:25:01.892282"]]
+  [1m [36m (11.9ms) [0m   [1mcommit transaction [0m
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.3ms) [0m   [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ? [0m  [["last_sign_in_at", "2017-11-16 13:25:01.906666"], ["current_sign_in_at", "2017-11-16 13:25:01.906666"], ["last_sign_in_ip", "194.214.171.28"], ["current_sign_in_ip", "194.214.171.28"], ["sign_in_count", 1], ["updated_at", "2017-11-16 13:25:01.907492"], ["id", 4]]
+  [1m [35m (14.9ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 178ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:25:02 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  [1m [36mUser Load (0.2ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 4]]
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.2ms)
+  [1m [36mUser Load (1.9ms) [0m   [1mSELECT "users".* FROM "users" [0m
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:31:08 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m [36mActiveRecord::SchemaMigration Load (0.2ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+  [1m [35mUser Load (0.3ms) [0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navigation.html.erb (24.5ms)
+  Rendered shared/_message.html.erb (0.7ms)
+Completed 200 OK in 381ms (Views: 353.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 194.214.171.28 at 2017-11-16 13:31:20 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XfnEbumntJycSbfs0MX8fYSGgsp+FPUyHpskZqC/TBnrebYfm4ybvXQWi8OQoVjYl+baBloaLkuTbUCplEnZWQ=="}
+  [1m [36mUser Load (0.2ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 4]]
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36m (0.1ms) [0m   [1mcommit transaction [0m
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 584ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:31:20 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 13:31:23 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (5.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 194.214.171.28 at 2017-11-16 13:31:39 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vYMzgTE+Qd/8xT3IJ2ZPmv5GA7d8UdhyaU4VcLO+VOkH361YQ+4XOo8vLbEjWy/+2aZ9F+Mon0V3gfcMiWy51g==", "user"=>{"nom"=>"xxx", "prenom"=>"xxx", "entreprise"=>"xxx", "fonction"=>"xxx", "email"=>"xxx@xx.fr", "password"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m [35m (0.2ms) [0m  begin transaction
+  [1m [36mUser Exists (0.2ms) [0m   [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'xxx@xx.fr' LIMIT 1 [0m
+  [1m [35mSQL (0.6ms) [0m  INSERT INTO "users" ("email", "encrypted_password", "nom", "prenom", "entreprise", "fonction", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "xxx@xx.fr"], ["encrypted_password", "$2a$11$wP8L0StVlgAs.ZU5hHD5JOtB58TdvqTpHoKUx82CAAa9.ep3DZ8OS"], ["nom", "xxx"], ["prenom", "xxx"], ["entreprise", "xxx"], ["fonction", "xxx"], ["created_at", "2017-11-16 13:31:39.514931"], ["updated_at", "2017-11-16 13:31:39.514931"]]
+  [1m [36m (13.6ms) [0m   [1mcommit transaction [0m
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.5ms) [0m   [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ? [0m  [["last_sign_in_at", "2017-11-16 13:31:39.532213"], ["current_sign_in_at", "2017-11-16 13:31:39.532213"], ["last_sign_in_ip", "194.214.171.28"], ["current_sign_in_ip", "194.214.171.28"], ["sign_in_count", 1], ["updated_at", "2017-11-16 13:31:39.533496"], ["id", 5]]
+  [1m [35m (12.6ms) [0m  commit transaction
+Redirected to https://agria-grand-est-hakimghanem.c9users.io/
+Completed 302 Found in 214ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:31:40 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  [1m [36mUser Load (0.3ms) [0m   [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1 [0m  [["id", 5]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+  [1m [36mUser Load (2.7ms) [0m   [1mSELECT "users".* FROM "users" [0m
+  [1m [36mActiveRecord::SchemaMigration Load (8.9ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+Migrating to RemovedatedecreationFromTableForms (20171116134012)
+  [1m [35m (0.1ms) [0m  begin transaction
+  [1m [36mSQL (0.4ms) [0m   [1mINSERT INTO "schema_migrations" ("version") VALUES (?) [0m  [["version", "20171116134012"]]
+  [1m [35m (12.2ms) [0m  commit transaction
+  [1m [36mActiveRecord::SchemaMigration Load (0.2ms) [0m   [1mSELECT "schema_migrations".* FROM "schema_migrations" [0m
+  [1m [35m (0.2ms) [0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+
+  [1m [36m (0.1ms) [0m   [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m [35m (0.1ms) [0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'  [1m[36mActiveRecord::SchemaMigration Load (10.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 13:51:23 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (5.1ms)
+  Rendered shared/_message.html.erb (1.1ms)
+Completed 200 OK in 421ms (Views: 396.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/images/agria.JPG" for 194.214.171.28 at 2017-11-16 13:51:24 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/agria.JPG"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.0ms)
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 13:51:26 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (7.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 124.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/images/agria.JPG" for 194.214.171.28 at 2017-11-16 13:51:26 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/agria.JPG"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.9ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:21:48 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (7.8ms)
+  Rendered shared/_message.html.erb (1.5ms)
+Completed 200 OK in 664ms (Views: 633.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/images/agria.jpg" for 194.214.171.28 at 2017-11-16 14:21:49 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:21:51 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 116ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/images/agria.jpg" for 194.214.171.28 at 2017-11-16 14:21:52 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:23:01 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (7.1ms)
+  Rendered shared/_message.html.erb (1.1ms)
+Completed 200 OK in 565ms (Views: 537.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/agria.jpg" for 194.214.171.28 at 2017-11-16 14:23:02 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (41.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.1ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:23:11 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 160ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/agria.jpg" for 194.214.171.28 at 2017-11-16 14:23:11 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:25:26 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/agria.jpg" for 194.214.171.28 at 2017-11-16 14:25:27 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:25:41 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/agria.jpg" for 194.214.171.28 at 2017-11-16 14:25:42 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/agria.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:27:09 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/agria-499e6cc69f0758fb20128f204285446ed549de747324952a6d19ddbe480aba2a.jpg" for 194.214.171.28 at 2017-11-16 14:27:10 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:29:27 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ',', expecting ')'
+...ppend=( image_tag ("agria.jpg",:size => "260x180") );@output...
+...                               ^
+/home/ubuntu/workspace/app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+...gria.jpg",:size => "260x180") );@output_buffer.safe_append='...
+...                               ^):
+  app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ',', expecting ')'
+  app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1504021095056102723_21017940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.3ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:29:46 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ',', expecting ')'
+...ppend=( image_tag ("agria.jpg",:size => "26x18") );@output_b...
+...                               ^
+/home/ubuntu/workspace/app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+..."agria.jpg",:size => "26x18") );@output_buffer.safe_append='...
+...                               ^):
+  app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ',', expecting ')'
+  app/views/layouts/_navigation.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1504021095056102723_21017940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:30:22 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:30:34 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 168ms (Views: 167.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:30:48 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:30:57 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:32:27 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (120.0ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 455ms (Views: 454.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/agria-68cf0277960f785440f3bea9d58f44af649497e2d360a343f95454c7766384ac.png" for 194.214.171.28 at 2017-11-16 14:32:28 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:36:30 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:38:42 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:38:44 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:40:24 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:40:37 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 184.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:42:03 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:45:07 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:45:28 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:46:21 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:46:48 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:49:46 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:08 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:10 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:13 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:17 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (67.9ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 145ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:18 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:35 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:51:36 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:52:51 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:52:51 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:53:42 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:53:43 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:58:14 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:58:15 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 194.214.171.28 at 2017-11-16 14:58:17 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devise_errors.html.erb (6.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 115.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/login" for 194.214.171.28 at 2017-11-16 14:58:20 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:58:22 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:58:52 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 14:59:13 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:02:55 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered shared/_message.html.erb (1.0ms)
+Completed 200 OK in 512ms (Views: 489.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:04:03 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 216ms (Views: 215.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:04:32 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 3157ms (Views: 3155.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-15c693d2273ad455761e54c0c452de0c640fe44be93378b662d3cd0f15d2db45.css?body=1" for 194.214.171.28 at 2017-11-16 15:04:36 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:06:17 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:06:20 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:07:18 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 2835ms (Views: 2834.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-204aa5b4f9b81e1a4b88719b41571c9191cea27c1cb0c84f6053688bb9e87422.css?body=1" for 194.214.171.28 at 2017-11-16 15:07:21 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:07:32 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 2765ms (Views: 2764.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7cb47f4ef07f09acffe80af827b0aebeac5fafce3881108afee23ba8481a7493.css?body=1" for 194.214.171.28 at 2017-11-16 15:07:35 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:08:03 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 3343ms (Views: 3342.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4fb8f1c564ed298a478a652da3a642dc9b4e7e3be6b5d46baef6b960d9dc9a95.css?body=1" for 194.214.171.28 at 2017-11-16 15:08:06 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:08:36 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:10:47 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (61.0ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `new_form_path' for #<#<Class:0x00000003a47a60>:0x007f88e7796a68>
+Did you mean?  new_room_path):
+     9:         <div class="navbar-collapse collapse navbar-right">
+    10:           <ul class="nav navbar-nav navbar-right">
+    11:                       <li>
+    12:                           <%= link_to new_form_path do %> 
+    13:                           <i class="fa-file-text-o"></i> Créez votre formulaire 
+    14:                          <% end %>      
+    15:                     </li>
+  app/views/layouts/_navigation.html.erb:12:in `_app_views_layouts__navigation_html_erb__2166214935814425438_70112972059740'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1236748967266058798_30034300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.7ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:11:28 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 184ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 194.214.171.28 at 2017-11-16 15:12:27 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (96.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 202ms (Views: 178.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 194.214.171.28 at 2017-11-16 15:12:41 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8A29CZrJjWjdOGbDS2eODRgphEfkzl/MGUbJFILSKSFWbpuaFr1yVOMnRtxSrKexH32Ps+9uIDQlAbdbz13RA==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Connexion"}
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-11-16 12:28:32.129968"], ["current_sign_in_at", "2017-11-16 15:12:41.914284"], ["sign_in_count", 8], ["updated_at", "2017-11-16 15:12:41.916032"], ["id", 1]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://agria-grand-est-sofian0.c9users.io/
+Completed 302 Found in 952ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:12:43 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:12:53 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 194.214.171.28 at 2017-11-16 15:12:55 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5aQLuWZjXYJ+VmE4fVZn4soiS50SSw+uZBMJy9KiZF5ZFMZ60uoCpHW6t7apRkLL6+GOkRYyen7OXfe6ytAzWQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to https://agria-grand-est-sofian0.c9users.io/
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:12:55 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered shared/_message.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:14:07 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:14:07 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 194.214.171.28 at 2017-11-16 15:14:10 +0000
+Cannot render console from 194.214.171.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
