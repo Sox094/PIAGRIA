@@ -10,6 +10,7 @@
 body {
   padding-top: 10px;
   padding-left: 10px;
+  padding-right: 5px;
 }
 .navbar-default {
     background-color: #F0F8FF;
@@ -18,3 +19,9 @@ body {
 }
 .navbar { height: 10em; }
 
+.navbar-right {
+    margin-right: 25px;
+}
+.navbar-left {
+    margin-left: 25px;
+}
