@@ -5,3 +5,16 @@
 @import "font-awesome";
 
 @import "toastr";
+
+
+body {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.navbar-default {
+    background-color: #F0F8FF;
+    //border-color: #00BFFF;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.navbar { height: 10em; }
+
