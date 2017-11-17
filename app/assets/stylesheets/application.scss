@@ -8,7 +8,7 @@
 
 
 body {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
 }
@@ -17,12 +17,6 @@ body {
     background-color: #F0F8FF;
     //border-color: #00BFFF;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-inverse{
-    background-color: #F0F8FF;
-    border-color: #F0F8FF;
-    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar { height: 10em; }
@@ -41,12 +35,15 @@ body {
 #nav2{
     margin-top : 35px;
 }
-#footer1{
-    margin-top : 35px;
-
-}
 
 .collapse{
     margin-top : 35px;
     font-size: 20px;
+}
+.navbar-inverse{
+    height: 1em;
+    background-color: #F0F8FF;
+    border-color: #F0F8FF;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.2);
+    margin-top : 35px;
 }
