@@ -1,12 +1,57 @@
-<li>
+
+<h1> Bienvenue sur le générateur de formulaires d'Agria Grand Est  </h1>
+
+<br/><br/>
+<div class="col-md-2">
     
-<i class="fa fa-home fa-lg"> HH </i>
+</div>
 
-<h1> Bienvenue sur mon site </h1>
+<div class="col-md-2">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class= "col-xs-8 .col-md-8">
 
+                <div class="container">
+                    <div class="row">
+                        <div class="text-left-xs text-right-md"><%= link_to new_form_path do %>Créer un formulaire</div><% end %>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>   
+</div>
 
-</li>
+<div class="col-md-3">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Formulaire 1
+        </div>
+    
+        <div class="panel-body">
+            <div class= "col-xs-8 .col-md-8">
+                <div class="container">
+                Formulaire crée par ..
+                Le ...
+                </div>    
+        </div>
+        </div>
+    </div>   
+</div>
 
-<%= link_to 'Inscription', new_user_registration_path %> 
-<%= link_to 'Identification', new_user_session_path %>
-<%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %>
+<div class="col-md-3">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Formulaire 2
+        </div>
+    
+        <div class="panel-body">
+            <div class= "col-xs-8 .col-md-8">
+                <div class="container">
+                Formulaire crée par ..
+                Le ...
+                </div>    
+        </div>
+        </div>
+    </div>   
+</div>
+
