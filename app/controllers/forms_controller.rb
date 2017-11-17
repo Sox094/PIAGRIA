@@ -18,9 +18,11 @@ class FormsController < ApplicationController
     def new
        @form = current_user.forms.build #Nouvelle entrée dans la table form créer par le current user 
     end
-    
+
+
+
     def create
-        @form = current_user.form.build(form_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
+        @form = current_user.forms.build(form_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
         
         if @form.save    # Si le form est sauvegardée dans la BDDon notifie le user
             redirect_to @form, notice: "Votre formulaire a bien été crée"
@@ -55,7 +57,7 @@ class FormsController < ApplicationController
     end
     
     def form_params
-        params.requre(:form).permit(:nom, :description, :datedecreation)
+        params.require(:form).permit(:nom, :description)
     end
     
       
