@@ -1,0 +1,12 @@
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><%= @formulaire.name %></div>
+    <div class="panel-body"><%= @formulaire.description %></div>
+</div>
+
+
+<ul class="pager">
+    <li class="Edit"><%= link_to 'Edit', edit_formulaire_path(@formulaire) %>  </li>
+    <li class="Retour"><%= link_to 'Back', formulaires_path %> </li>
+</ul>

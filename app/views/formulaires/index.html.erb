@@ -1,0 +1,54 @@
+
+<div class="text-center">
+    <h1> Bienvenue sur le générateur de formulaires d'Agria Grand Est  </h1>
+</div>
+
+<br/><br/>
+
+<div class="col-md-2">
+    
+</div>
+
+
+<div class="col-md-2">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class= "col-xs-8 .col-md-8">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="text-left-xs text-right-md"><%= link_to new_formulaire_path do %>Créer un formulaire
+                        <br/>
+                        <i class="fa fa-plus fa-5x"></i>
+                        </div><% end %>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>   
+</div>
+
+<div class="col-md-3">
+    <% @formulaires.each do |formulaire| %>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+         <%= formulaire.name %>
+        </div>
+    
+        <div class="panel-body">
+            <div class= "col-xs-8 .col-md-8">
+                <div class="container">
+                  <td><%= formulaire.description %></td>
+                    </br><hr/>
+                    <td><%= link_to 'Show', formulaire %></td>
+                    <td><%= link_to 'Edit', edit_formulaire_path(formulaire) %></td>
+                    <td><%= link_to ' Delete', formulaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash" %> </td>
+                    
+
+             
+                </div>    
+        </div>
+        </div>
+    </div> 
+    <% end %>
+</div>
