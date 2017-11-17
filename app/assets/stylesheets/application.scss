@@ -12,11 +12,19 @@ body {
   padding-left: 10px;
   padding-right: 5px;
 }
+
 .navbar-default {
     background-color: #F0F8FF;
     //border-color: #00BFFF;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
+
+.navbar-inverse{
+    background-color: #F0F8FF;
+    border-color: #F0F8FF;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.2);
+}
+
 .navbar { height: 10em; }
 
 .navbar-right {
@@ -33,7 +41,10 @@ body {
 #nav2{
     margin-top : 35px;
 }
+#footer1{
+    margin-top : 35px;
 
+}
 
 .collapse{
     margin-top : 35px;
