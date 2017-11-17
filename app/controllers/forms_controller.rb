@@ -25,7 +25,8 @@ class FormsController < ApplicationController
         @form = current_user.forms.build(form_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
         
         if @form.save    # Si le form est sauvegardée dans la BDDon notifie le user
-            redirect_to @form, notice: "Votre formulaire a bien été crée"
+            redirect_to edit_form_path(@form), notice: "Votre formulaire a bien été crée"
+
         else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
 
                 render :new
