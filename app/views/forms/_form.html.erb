@@ -1,21 +1,45 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
         Créez un formulaire
     </div>
     
     <div class="panel-body">
-        <div class="container">
-            <%= form_for @form do |f| %>
-                    <h6><i> Ici on créera le formulaire, en JS avec des glisser/déposer de nos items (radiobutton/check
-                  box etc). Barre latérale avec les items </i></h6>
-          
-          
-              <div class="actions">
-                  <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
-              </div>
+        <div class= "col-xs-8 .col-md-8">
+            <div class="container">
+                <%= form_for @form do |f| %>
+                        <h6><i> Ici on créera le formulaire, en JS avec des glisser/déposer de nos items (radiobutton/check
+                      box etc). Barre latérale avec les items </i></h6>
               
-            <% end %>
-        </div>    
+              
+                  <div class="actions">
+                      <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
+                  </div>
+                  
+                <% end %>
+            </div>    
+        </div>
+        
+        
+
+        
+        
+        <!-- Boite à outils latérale -->
+        
+        <div class="col-xs-4 .col-md-4">
+                        <div class="panel panel-info">
+                <div class="panel-heading">
+                        Boite à outils
+                </div>
+                    
+                <div class="panel-body">
+                    <div class="container">
+                        items
+                    </div>    
+                </div>
+            </div>    
+        </div>
+
+
     </div>
 </div>
 
