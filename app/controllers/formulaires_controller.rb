@@ -1,11 +1,11 @@
 class FormulairesController < ApplicationController
-  before_action :set_formulaire, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_formulaire, only: [:edit, :update, :destroy]  
+  before_action :authenticate_user!, except: [:show]
   # GET /formulaires
   # GET /formulaires.json
   def index
-    @formulaires = Formulaire.all
-    #@formulaires = current_user.formulaires
+    #@formulaires = Formulaire.all
+    @formulaires = current_user.formulaires
   end
 
   # GET /formulaires/1
@@ -15,8 +15,8 @@ class FormulairesController < ApplicationController
 
   # GET /formulaires/new
   def new
-    @formulaire = Formulaire.new
-    #@formulaire = current_user.formulaires.build
+    #@formulaire = Formulaire.new
+    @formulaire = current_user.formulaires.build
   end
 
   # GET /formulaires/1/edit
@@ -26,31 +26,38 @@ class FormulairesController < ApplicationController
   # POST /formulaires
   # POST /formulaires.json
   def create
-    @formulaire = Formulaire.new(formulaire_params)
-    #@formulaire = current_user.formulaires.build(formulaire_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
+    #@formulaire = Formulaire.new(formulaire_params)
+    @formulaire = current_user.formulaires.build(formulaire_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
         
     
-              if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
-            redirect_to edit_formulaire_path(@formulaire), notice: "Votre formulaire a bien été crée"
+      if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
+        #redirect_to edit_formulaire_path(@formulaire), notice: "Votre formulaire a bien été crée"
+        redirect_to @formulaire, notice: "Votre formulaire a bien été crée"
 
-        else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
+      else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
 
-                render :new
-        end
+        render :new
+      end
     
   end
 
   # PATCH/PUT /formulaires/1
   # PATCH/PUT /formulaires/1.json
   def update
-    respond_to do |format|
-      if @formulaire.update(formulaire_params)
-        format.html { redirect_to @formulaire, notice: 'Formulaire was successfully updated.' }
-        format.json { render :show, status: :ok, location: @formulaire }
-      else
-        format.html { render :edit }
-        format.json { render json: @formulaire.errors, status: :unprocessable_entity }
-      end
+    #respond_to do |format|
+     # if @formulaire.update(formulaire_params)
+      #  format.html { redirect_to @formulaire, notice: 'Formulaire was successfully updated.' }
+       # format.json { render :show, status: :ok, location: @formulaire }
+      #else
+       # format.html { render :edit }
+        #format.json { render json: @formulaire.errors, status: :unprocessable_entity }
+      #end
+    #end
+    
+    if @formulaire.update(formulaire_params)
+      redirect_to @formulaire, notice: "Modification enregistrée"
+    else
+      render :edit
     end
   end
 
