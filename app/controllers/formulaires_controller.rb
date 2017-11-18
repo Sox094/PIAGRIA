@@ -1,5 +1,5 @@
 class FormulairesController < ApplicationController
-  before_action :set_formulaire, only: [:edit, :update, :destroy]  
+  before_action :set_formulaire, only: [:show, :edit, :update, :destroy]  
   before_action :authenticate_user!, except: [:show]
   # GET /formulaires
   # GET /formulaires.json
