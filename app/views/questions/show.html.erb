@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Formulaire:</strong>
+  <%= @question.formulaire %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @question.nom %>
+</p>
+
+<p>
+  <strong>Typequestion:</strong>
+  <%= @question.typequestion %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @question.media %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

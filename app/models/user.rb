@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :formulaires
-  
+  has_many :questions
   
   validates :nom, presence: true, length: {maximum: 65}
   validates :prenom, presence: true, length: {maximum: 65}

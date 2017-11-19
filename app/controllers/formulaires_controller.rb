@@ -1,6 +1,8 @@
 class FormulairesController < ApplicationController
   before_action :set_formulaire, only: [:show, :edit, :update, :destroy]  
   before_action :authenticate_user!, except: [:show]
+  before_action :require_same_user, only: [:edit, :update]
+
   # GET /formulaires
   # GET /formulaires.json
   def index
@@ -11,6 +13,7 @@ class FormulairesController < ApplicationController
   # GET /formulaires/1
   # GET /formulaires/1.json
   def show
+    @questions = @formulaire.questions
   end
 
   # GET /formulaires/new
@@ -21,6 +24,8 @@ class FormulairesController < ApplicationController
 
   # GET /formulaires/1/edit
   def edit
+    @questions = @formulaire.questions
+
   end
 
   # POST /formulaires
@@ -31,6 +36,7 @@ class FormulairesController < ApplicationController
         
     
       if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
+        @questions = @formulaire.questions
         #redirect_to edit_formulaire_path(@formulaire), notice: "Votre formulaire a bien été crée"
         redirect_to @formulaire, notice: "Votre formulaire a bien été crée"
 
@@ -55,6 +61,8 @@ class FormulairesController < ApplicationController
     #end
     
     if @formulaire.update(formulaire_params)
+      @questions = @formulaire.questions
+
       redirect_to @formulaire, notice: "Modification enregistrée"
     else
       render :edit
@@ -66,7 +74,7 @@ class FormulairesController < ApplicationController
   def destroy
     @formulaire.destroy
     respond_to do |format|
-      format.html { redirect_to formulaires_url, notice: 'Formulaire was successfully destroyed.' }
+      format.html { redirect_to formulaires_url, notice: "Le Formulaire a bien été détruit" }
       format.json { head :no_content }
     end
   end
@@ -80,5 +88,11 @@ class FormulairesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def formulaire_params
       params.require(:formulaire).permit(:name, :description)
+    end
+    
+    def require_same_user 
+      if current_user.id != @formulaire.user_id
+        flash[:danger] = "Vous n'avez pas les droits"
+      end
     end
 end

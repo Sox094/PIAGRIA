@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118143607) do
+ActiveRecord::Schema.define(version: 20171119151201) do
 
   create_table "forms", force: :cascade do |t|
     t.string   "nom"
@@ -33,6 +33,19 @@ ActiveRecord::Schema.define(version: 20171118143607) do
   end
 
   add_index "formulaires", ["user_id"], name: "index_formulaires_on_user_id"
+
+  create_table "questions", force: :cascade do |t|
+    t.integer  "formulaire_id"
+    t.string   "nom"
+    t.string   "typequestion"
+    t.string   "media"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  add_index "questions", ["formulaire_id"], name: "index_questions_on_formulaire_id"
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
