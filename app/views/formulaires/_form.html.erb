@@ -24,6 +24,27 @@
                             <%= f.text_area :description, placeholder: "Nom du formulaire", class: "form-control" %>
                     </div>
                 </div>
+                
+                <br/>
+                <hr/>
+                <br/>
+                
+                <!-- PLACER ICI LES QUESTIONS  -->
+                <!-- JS : Appuyer sur le bouton NEW création des champs. Render questions/_form -->
+                
+                <div class="row">
+                    <div class="col-md-8 text-center">
+                        <%= link_to 'New Question', new_question_path, class: "btn btn-success" %>
+
+                    </div>
+                </div>
+                
+
+                
+                <br/>
+                <hr/>
+                <br/>
+                
                 <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
                 </div>

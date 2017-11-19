@@ -15,7 +15,7 @@ end
 
 def new
   #@formulaire = Formulaire.new
-  #@question = current_user.formulaires.questions.build
+  #@question = @formulaire.questions.build
   @question = current_user.questions.build       
 end
   

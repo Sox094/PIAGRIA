@@ -11,23 +11,35 @@
     </div>
   <% end %>
 
+  <!--
   <div class="field">
-    <%= f.label :formulaire_id %><br>
     <%= f.text_field :formulaire_id %>
   </div>
-  <div class="field">
-    <%= f.label :nom %><br>
-    <%= f.text_field :nom %>
+  -->
+  
+  <div class="row">
+    <div class="form-group col-md-8">
+        <label>Nom de la question :</label>
+            <%= f.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :typequestion %><br>
-    <%= f.text_field :typequestion %>
+
+  <div class="row">
+    <div class="form-group col-md-8">
+        <label>Type de question :</label>
+            <%= f.select :typequestion,[["option 1",1],["option 2",2]],prompt: "Sélectionner le nombre", class: "form-control" %>
+    </div>
   </div>
+  
+  <!--
   <div class="field">
     <%= f.label :media %><br>
     <%= f.text_field :media %>
   </div>
+  -->
+  
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
