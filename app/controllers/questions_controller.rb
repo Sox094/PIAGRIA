@@ -25,7 +25,7 @@ def create
     
       if @question.save    # Si le form est sauvegardée dans la BDDon notifie le user
         #redirect_to edit_formulaire_path(@formulaire), notice: "Votre q a bien été crée"
-        redirect_to @question, notice: "Votre q a bien été crée"
+        redirect_to @question, notice: "Votre question a bien été crée"
 
       else     #Si la q n'est pas crée alors l'user est redirigée vers la page de création new
 
