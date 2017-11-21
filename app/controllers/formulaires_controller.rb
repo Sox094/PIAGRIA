@@ -1,13 +1,16 @@
 class FormulairesController < ApplicationController
   before_action :set_formulaire, only: [:show, :edit, :update, :destroy]  
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update]
 
   # GET /formulaires
   # GET /formulaires.json
   def index
-    #@formulaires = Formulaire.all
-    @formulaires = current_user.formulaires
+    if current_user
+      @formulaires = current_user.formulaires
+    else 
+      @formulaires = Formulaire.all
+    end
   end
 
   # GET /formulaires/1
@@ -74,7 +77,7 @@ class FormulairesController < ApplicationController
   def destroy
     @formulaire.destroy
     respond_to do |format|
-      format.html { redirect_to formulaires_url, notice: "Le Formulaire a bien été détruit" }
+      format.html { redirect_to formulaires_url, notice: "Le formulaire a bien été détruit" }
       format.json { head :no_content }
     end
   end
