@@ -16,11 +16,12 @@ end
 def new
   #@formulaire = Formulaire.new
   #@question = @formulaire.questions.build
-  @question = current_user.questions.build       
+  @question = current_user.questions.new      
 end
   
 def create
-      @question = current_user.questions.build(question_params) # on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
+      @question = current_user.questions.build(question_params)
+      #@question = current_user.formulaire.build(question_params)# on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
         
     
       if @question.save    # Si le form est sauvegardée dans la BDDon notifie le user
