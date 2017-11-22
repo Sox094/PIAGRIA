@@ -6,12 +6,11 @@
 
 @import "toastr";
 
-
 body {
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
-  padding-bottom: 200px; 
+  padding-bottom: 50px; 
 }
 
 .navbar-default {
@@ -41,11 +40,19 @@ body {
     margin-top : 35px;
     font-size: 20px;
 }
-.navbar-inverse{
-    height: 1em;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+ 
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width : 99%;
+    height: 3em;
     background-color: #F0F8FF;
     border-color: #F0F8FF;
     box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.2);
-    margin-top : 35px;
-
+    margin-top : 10px;
 }
