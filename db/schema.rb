@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119151201) do
+ActiveRecord::Schema.define(version: 20171126140911) do
 
   create_table "forms", force: :cascade do |t|
     t.string   "nom"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20171119151201) do
   create_table "questions", force: :cascade do |t|
     t.integer  "formulaire_id"
     t.string   "nom"
-    t.string   "typequestion"
+    t.integer  "typequestion"
     t.string   "media"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
