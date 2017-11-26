@@ -44,7 +44,11 @@
                 <br/>
                 
                 <%= f.fields_for :questions do |field| %>
-                    <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>   
+                    <div class="form-group">
+                        <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
+                        <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
+                        .keys), placeholder: "Type", class: "form-control" %>
+                    </div>    
                 <% end %>
                 <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>

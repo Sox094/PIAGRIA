@@ -90,7 +90,7 @@ class FormulairesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def formulaire_params
-      params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom]) if params[:formulaire]
+      params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom, :typequestion]) if params[:formulaire]
     end
     
     def require_same_user 
