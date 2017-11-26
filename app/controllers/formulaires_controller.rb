@@ -27,7 +27,8 @@ class FormulairesController < ApplicationController
 
   # GET /formulaires/1/edit
   def edit
-    @questions = @formulaire.questions
+    @formulaire.questions.build
+
 
   end
 
@@ -40,8 +41,8 @@ class FormulairesController < ApplicationController
     
       if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
         @questions = @formulaire.questions
+        redirect_to @formulaire, notice: "Votre formulaire a bien été crée"   #Cette config est mieux que la suivante
         #redirect_to edit_formulaire_path(@formulaire), notice: "Votre formulaire a bien été crée"
-        redirect_to @formulaire, notice: "Votre formulaire a bien été crée"
 
       else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
 
@@ -62,7 +63,6 @@ class FormulairesController < ApplicationController
         #format.json { render json: @formulaire.errors, status: :unprocessable_entity }
       #end
     #end
-    
     if @formulaire.update(formulaire_params)
       @questions = @formulaire.questions
 
@@ -90,7 +90,7 @@ class FormulairesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def formulaire_params
-      params.require(:formulaire).permit(:name, :description)
+      params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom]) if params[:formulaire]
     end
     
     def require_same_user 

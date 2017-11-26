@@ -7,10 +7,9 @@
     
     <div class="panel-body">
         <div class= "col-md-8">
-            <div class="container">
+            <div class="form-group">
                 <%= form_for (@formulaire) do |f| %>
-                        <h6><i> Ici on créera le formulaire, en JS avec des glisser/déposer de nos items (radiobutton/check
-                      box etc). Barre latérale avec les items </i></h6>
+
                 
                 <div class="row">
                     <div class="form-group col-md-8">
@@ -40,12 +39,13 @@
                 </div>
                 
 
-
-                
                 <br/>
                 <hr/>
                 <br/>
                 
+                <%= f.fields_for :questions do |field| %>
+                    <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>   
+                <% end %>
                 <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
                 </div>
