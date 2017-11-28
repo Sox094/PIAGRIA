@@ -23,11 +23,12 @@ class FormulairesController < ApplicationController
   def new
     #@formulaire = Formulaire.new
     @formulaire = current_user.formulaires.build
+
   end
 
   # GET /formulaires/1/edit
   def edit
-    @formulaire.questions.build
+    @formulaire.questions.build  #Ici on crée les champs de création de Question  
 
 
   end
@@ -90,7 +91,7 @@ class FormulairesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def formulaire_params
-      params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom, :typequestion, choixes_attributes:[:id, :choix]]) if params[:formulaire]
+      params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom, :typequestion,]) if params[:formulaire]
     end
     
     def require_same_user 

@@ -17,15 +17,20 @@ def new
   #@formulaire = Formulaire.new
   #@question = @formulaire.questions.build
   @question = current_user.questions.build       
+
 end
-  
+ def edit 
+     @question.choixes.build
+
+ end
+ 
 def create
       @question = current_user.questions.build(question_params) # on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
         
     
       if @question.save    # Si le form est sauvegardée dans la BDDon notifie le user
         #redirect_to edit_formulaire_path(@formulaire), notice: "Votre q a bien été crée"
-        redirect_to @question, notice: "Votre question a bien été crée"
+        redirect_to @question, notice: "Votre question a bien été créee"
 
       else     #Si la q n'est pas crée alors l'user est redirigée vers la page de création new
 
@@ -37,6 +42,8 @@ end
 def show
     #@questions = @formulaire.questions
     #@questions = @formulaire.questions
+    @choixes = @question.choixes
+
 end
 
 def destroy
@@ -82,6 +89,7 @@ private
   end
     
      def question_params         
-        params.require(:question).permit(:nom, :typequestion, :media)     
+        params.require(:question).permit(:nom, :typequestion, :media, choixes_attributes:[:id, :choix]) if params[:question]  
+
      end 
 end
