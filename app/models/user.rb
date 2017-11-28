@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   
   validates :nom, presence: true, length: {maximum: 65}
   validates :prenom, presence: true, length: {maximum: 65}
-  validates :entreprise, presence: true, length: {maximum: 65}
   validates :fonction, presence: true, length: {maximum: 65}
+  
   
 end

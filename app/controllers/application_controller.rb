@@ -14,13 +14,10 @@ def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:prenom])
     devise_parameter_sanitizer.permit(:account_update, keys: [:prenom])
     
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:entreprise])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:entreprise])
-    
     devise_parameter_sanitizer.permit(:sign_up, keys: [:fonction])
     devise_parameter_sanitizer.permit(:account_update, keys: [:fonction])
 end
 
-
+    
 
 end
