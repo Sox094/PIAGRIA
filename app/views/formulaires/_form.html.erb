@@ -31,7 +31,7 @@
                 <div class="col-md-1">
                     
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9">    <!-- Cacher cette div s'il n'y a pas de questions-->
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             Questions
@@ -42,19 +42,20 @@
                             <%= f.fields_for :questions do |field| %>
                                 <div class="form-group">
                                     <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
-
                                     <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                                     .keys), placeholder: "Type", class: "form-control" %>
+                                     
+                                     <!-- Supprimer la question : Delete: %= field.check_box :_destroy %>  -->
         
                                 </div>
                                 
-                                <!-- PLACER ICI LES CHOIX --
-                                %= f.fields_for :choixes do |fc| %>
-                                    %= fc.text_field :choix, placeholder: "-", class: "form-control" %>
+                                <!-- PLACER ICI LES CHOIX -->
+                                <%= f.fields_for :choixes do |fc| %>
+                                    <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>
                                 
                                     
-                                % end %>
-                                -->
+                                <% end %>
+                                
                             <% end %>
 
                             
