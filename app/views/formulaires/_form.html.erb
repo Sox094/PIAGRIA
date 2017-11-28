@@ -6,7 +6,7 @@
     
     
     <div class="panel-body">
-        <div class= "col-md-8">
+        <div class= "col-md-10">
             <div class="form-group">
                 <%= form_for (@formulaire) do |f| %>
 
@@ -29,48 +29,48 @@
                 <br/>
                 
                 <!-- PLACER ICI LES QUESTIONS  -->
-                <!-- JS : Appuyer sur le bouton NEW création des champs. Render questions/_form -->
-                
-                <div class="row">
-                    <div class="col-md-8 text-center">
-                        <%= link_to '', new_question_path, class: "btn-sm btn-primary fa fa-plus" %>
-
-                    </div>
+                <div class="col-md-1">
+                    
                 </div>
-                
+                <div class="col-md-9">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Questions
+                        </div>
+                                
+                        <div class="panel-body">
+                                
+                            <%= f.fields_for :questions do |field| %>
+                                <div class="form-group">
+                                    <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
 
-                <br/>
-                <hr/>
-                <br/>
-                
-                <%= f.fields_for :questions do |field| %>
-                    <div class="form-group">
-                        <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
-                        <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
-                        .keys), placeholder: "Type", class: "form-control" %>
-                    </div>    
-                <% end %>
+                                    <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
+                                    .keys), placeholder: "Type", class: "form-control" %>
+        
+                                </div>
+                                
+                                <!-- PLACER ICI LES CHOIX --
+                                %= f.fields_for :choixes do |fc| %>
+                                    %= fc.text_field :choix, placeholder: "-", class: "form-control" %>
+                                
+                                    
+                                % end %>
+                                -->
+                            <% end %>
+
+                            -->
+                            
+
+                              
+                            
+                        </div>    
+                    </div>
                 <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
+                </div>     
                 </div>
-                  
+
                 <% end %>
-            </div>    
-        </div>
-    
-        <!-- Boite à outils latérale -->
-        
-        <div class="col-md-4">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                        Boite à outils
-                </div>
-                    
-                <div class="panel-body">
-                    
-                        items
-                       
-                </div>
             </div>    
         </div>
 

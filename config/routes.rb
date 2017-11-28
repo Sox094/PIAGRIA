@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :formulaires
   resources :questions, only: [:destroy]
+  resources :choixes
 
   
   # The priority is based upon order of creation: first created -> highest priority.

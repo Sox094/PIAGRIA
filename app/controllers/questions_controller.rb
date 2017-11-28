@@ -40,12 +40,15 @@ def show
 end
 
 def destroy
-  @question.destroy
+    @question = Question.find params[:id]
+    @question.destroy
   respond_to do |format|
     format.html { redirect_to questions_url, notice: "La question a bien été détruite" }
     format.json { head :no_content }
   end
+  redirect_back fallback_location: root_path
 end
+
 def update
     #respond_to do |format|
      # if @formulaire.update(formulaire_params)
