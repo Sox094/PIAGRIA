@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126140911) do
+ActiveRecord::Schema.define(version: 20171128092706) do
+
+  create_table "choixes", force: :cascade do |t|
+    t.integer  "question_id"
+    t.string   "choix"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "choixes", ["question_id"], name: "index_choixes_on_question_id"
 
   create_table "forms", force: :cascade do |t|
     t.string   "nom"
