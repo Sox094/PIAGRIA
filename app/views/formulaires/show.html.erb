@@ -1,14 +1,20 @@
 
-
 <div class="panel panel-primary">
     <div class="panel-heading">
         <%= @formulaire.name %>
     </div>
     <div class="panel-body">
         <%= @formulaire.description %>
-        <br/><hr/><br/>
-        
-<!-- Afficher les questions du formulaire en question. Et pas toutes les questions... -->
+        <br/><hr/>
+        <% i =1 %>
+                <% @questions.each_with_index do |question| %>
+                  <tr>
+                    <label><br> Question <%= i %>  </br></label> </br> </br>
+                    <label> Nom de la question : </label> <%= question.nom %> </br>
+                    <label><br> Type question : </br></label> <%= question.typequestion %> </br></br></br>
+                    <% i= i+1 %>
+                  </tr>
+                <% end %>
 
 </div>
 </div>
