@@ -16,16 +16,17 @@ end
 def new
   #@formulaire = Formulaire.new
   #@question = @formulaire.questions.build
-  @question = current_user.questions.build       
+  @question = current_user.questions.new       
 
 end
  def edit 
-     @question.choixes.build
+    @question = Question.find params[:id]
+     @question.choixes.new
 
  end
  
 def create
-      @question = current_user.questions.build(question_params) # on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
+      @question = current_user.questions.new(question_params) # on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
         
     
       if @question.save    # Si le form est sauvegardée dans la BDDon notifie le user
@@ -57,18 +58,9 @@ def destroy
 end
 
 def update
-    #respond_to do |format|
-     # if @formulaire.update(formulaire_params)
-      #  format.html { redirect_to @formulaire, notice: 'Formulaire was successfully updated.' }
-       # format.json { render :show, status: :ok, location: @formulaire }
-      #else
-       # format.html { render :edit }
-        #format.json { render json: @formulaire.errors, status: :unprocessable_entity }
-      #end
-    #end
-    
-    if @question.update(question_params)
+    @question = Question.find params[:id]
 
+    if @question.update(question_params)
       redirect_to @question, notice: "Modification enregistrée"
     else
       render :edit
@@ -82,14 +74,15 @@ def update
     
 end  
   
-private
 
-  def set_question
+
+    def set_question
       @question = Question.find(params[:id])
-  end
+    end
     
-     def question_params         
-        params.require(:question).permit(:nom, :typequestion, :media, choixes_attributes:[:id, :choix]) if params[:question]  
+    def question_params         
+    params.require(:question).permit(:nom, :typequestion, :media, choixes_attributes: [:id, :choix]) 
+    if params[:question]  
 
-     end 
+    end 
 end

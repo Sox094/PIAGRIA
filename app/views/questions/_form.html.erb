@@ -1,18 +1,13 @@
 <%= form_for(@question) do |f| %>
-
-
   <!--
   <div class="field">
     <%= f.text_field :formulaire_id %>
   </div>
   -->
-  
   <div class="row">
     <div class="form-group col-md-8">
         <label>Nom de la question :</label>
             <%= f.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
-            
-
     </div>
   </div>
 
@@ -22,7 +17,6 @@
             <%= f.select :typequestion,[["Choix multiples",1],["Choix simple",2],["Reponse courte",3]],prompt: "Sélectionner le type de qu", class: "form-control" %>
     </div>
   </div>
-  
   <!--
   <div class="field">
     <%= f.label :media %><br>
@@ -30,6 +24,12 @@
   </div>
   -->
   
+    <!-- CHOIX  -->
+      <%= f.fields_for :choixes do |fc| %>
+        <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
+    
+            
+      <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

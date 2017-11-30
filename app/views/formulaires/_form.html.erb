@@ -32,6 +32,7 @@
                     
                 </div>
                 <div class="col-md-9">  
+                                               
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             Questions
@@ -39,7 +40,8 @@
                                 
                         <div class="panel-body">
                                 
-                            <%= f.fields_for :questions do |field| %>
+                        <%= f.fields_for :questions do |field| %> 
+
                                 <div class="form-group">
                                     <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
                                     <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
@@ -50,17 +52,18 @@
                                 </div>
                                 
                                 <!-- PLACER ICI LES CHOIX --
-                                %= f.fields_for :choixes do |fc| %>
-                                    %= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
+                                <%= f.fields_for :choixes do |fc| %>
+                                    <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
                                 
                                     
-                                % end %> -->
+                                <% end %> -->
                                 
-                            <% end %>
 
-                            
+                        <% end %>  
                         </div>    
-                    </div>
+                    </div>     
+
+
                      <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
                 </div>
