@@ -28,8 +28,8 @@ class FormulairesController < ApplicationController
 
   # GET /formulaires/1/edit
   def edit
-  set_formulaire
-  @formulaire.questions.new  #Ici on crée les champs de création de Question
+    set_formulaire
+    @formulaire.questions.new  #Ici on crée les champs de création de Question
   end
 
   def create
@@ -62,7 +62,7 @@ class FormulairesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_formulaire
       @formulaire = Formulaire.find(params[:id])
-      #@question = Question.find(params[:id])
+      @question = @formulaire.questions
 
     end
     
