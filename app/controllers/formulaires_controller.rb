@@ -62,7 +62,8 @@ class FormulairesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_formulaire
       @formulaire = Formulaire.find(params[:id])
-      @question = @formulaire.questions
+      #@question = Question.find(params[:id])
+      #@question = @formulaire.questions
 
     end
     
