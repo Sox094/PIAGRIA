@@ -17,6 +17,7 @@ def new
   #@formulaire = Formulaire.new
   #@question = @formulaire.questions.build
   @question = current_user.questions.new       
+     @question.choixes.new
 
 end
  def edit 
@@ -73,9 +74,6 @@ def update
     end
     
 end  
-  
-
-
     def set_question
       @question = Question.find(params[:id])
     end
@@ -85,5 +83,5 @@ end
     if params[:question]  
 
     end 
-end
+    end
 end

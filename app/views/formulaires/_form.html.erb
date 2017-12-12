@@ -43,11 +43,17 @@
                         <%= f.fields_for :questions do |field| %> 
 
                                 <div class="form-group">
+                                    
                                     <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
                                     <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                                     .keys), placeholder: "Type", class: "form-control" %>
                                      
                                      <!-- Supprimer la question : check_box :_destroy %>  -->
+                                     <i class="fa fa-question-circle-o"  
+                                     title="Choix multiple : gngngngn - 
+ Choix simple : gngngn -
+ Réponse simple : gnngn"></i>
+
         
                                 </div>
                                 
