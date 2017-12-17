@@ -22,7 +22,7 @@ def new
 end
  def edit 
     @question = Question.find params[:id]
-     @question.choixes.new
+    @question.choixes.new
 
  end
  
@@ -59,7 +59,8 @@ def destroy
 end
 
 def update
-    @question = Question.find params[:id]
+    set_question
+        #@question = Question.find params[:id]
 
     if @question.update(question_params)
       redirect_to @question, notice: "Modification enregistrée"
@@ -80,8 +81,8 @@ end
     
     def question_params         
     params.require(:question).permit(:nom, :typequestion, :media, choixes_attributes: [:id, :choix]) 
-    if params[:question]  
+   
 
-    end 
+   
     end
 end

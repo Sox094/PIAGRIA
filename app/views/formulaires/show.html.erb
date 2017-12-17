@@ -6,15 +6,19 @@
     <div class="panel-body">
         <%= @formulaire.description %>
         <br/><hr/>
-        <% i =1 %>
-                <% @questions.each_with_index do |question| %>
-                  <tr>
-                    <label><br> Question <%= i %>  </br></label> </br> </br>
-                    <%= question.nom %> </br>
-
-                    <% i= i+1 %>
-                  </tr>
+        
+            <ol>
+                <% for question in @formulaire.questions %>
+                    <li> 
+                        <%=h question.nom %> 
+                        <ul>
+                            <%= for choix in question.choixes %>
+                                <li><%=h choix.choix %></li>
+                            <% end %>
+                        </ul>
+                        </li>
                 <% end %>
+            </ol>
 
     </div>
 </div>

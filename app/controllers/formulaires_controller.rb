@@ -20,22 +20,24 @@ class FormulairesController < ApplicationController
   end
 
   # GET /formulaires/new
-  def new
-    #@formulaire = Formulaire.new
-    @formulaire = current_user.formulaires.new
-    #@question = current_user.questions.new
+
+
+def new
+  @formulaire = Formulaire.new
+  2.times do
+    question = @formulaire.questions.build
+    3.times { question.choixes.build }
   end
+end
+
+
 
   # GET /formulaires/1/edit
   def edit
     
-    set_formulaire
-    @formulaire.questions.new  #Ici on crée les champs de création de Question
-    #@question.choixes.new   #Ici on crée les champs de création de choix
-
-    #@question.choixes.new
-    #@formulaire.questions.choixes.new  #Ici on crée les champs de création de Question
-  end
+    @formulaire = Formulaire.find(params[:id])
+    #@formulaire.questions.new  #Ici on crée les champs de création de Question
+   end
 
   def create
     @formulaire = current_user.formulaires.new(formulaire_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents

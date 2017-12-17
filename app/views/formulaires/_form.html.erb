@@ -41,14 +41,17 @@
                         <div class="panel-body">
                                 
                         <%= f.fields_for :questions do |field| %> 
-
+                            
                                 <div class="form-group">
                                     
                                     <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
                                     <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                                     .keys), placeholder: "Type", class: "form-control" %>
-                                     
-                                     <!-- Supprimer la question : check_box :_destroy %>  -->
+                       
+                                   <!-- Supprimer la question -->
+                                    <%= field.check_box :_destroy %>
+                                    <%= field.label :_destroy, "Suppr" %>
+                                    
                                      <i class="fa fa-question-circle-o"  
                                      title="Choix multiple : gngngngn - 
  Choix simple : gngngn -
@@ -57,21 +60,23 @@
         
                                 </div>
                                 
-                                <!-- PLACER ICI LES CHOIX --
+                                <!-- PLACER ICI LES CHOIX -->
                                 <%= f.fields_for :choixes do |fc| %>
                                     <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
-                                
+                                    <%= fc.label :choix, "Rép" %>
                                     
-                                <% end %> -->
-                                
 
-                        <% end %>  
+                                <% end %> 
+                                
+                        
+                        <% end %>
+                        
                         </div>    
                     </div>     
 
 
                      <div class="actions">
-                    <%= f.submit "Valider le formulaire", class:"btn btn-primary" %>
+                    <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>
                 </div>
                 </div>
 
