@@ -26,7 +26,7 @@ def new
   @formulaire = Formulaire.new
   2.times do
     question = @formulaire.questions.build
-    3.times { question.choixes.build }
+    3.times { question.answers.build }
   end
 end
 
@@ -37,10 +37,13 @@ end
     
     @formulaire = Formulaire.find(params[:id])
     #@formulaire.questions.new  #Ici on crée les champs de création de Question
-   end
+  end
 
   def create
-    @formulaire = current_user.formulaires.new(formulaire_params) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
+    puts formulaire_params.inspect
+    #@formulaire = Formulaire.new(params[:formulaire]) # on crée une nvlle entrée dans la table Form en prenant en compte les variables precedents
+      #@formulaire = Formulaire.new(formulaire_params)
+      @formulaire = current_user.formulaires.new(formulaire_params)
       if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
         redirect_to @formulaire, notice: "Votre formulaire a bien été crée"   #Cette config est mieux que la suivante
       else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
@@ -76,8 +79,11 @@ end
     
    
     def formulaire_params
-          params.require(:formulaire).permit(:name, :description, questions_attributes: [:id,:nom, :typequestion,
-          choixes_attributes:[:id, :choix]]) if params[:formulaire]
+          params.require(:formulaire).permit(:name, :description, 
+                  questions_attributes: [:id, :nom, :typequestion, '_destroy', 
+                      answers_attributes:[:id, :content]]) if params[:formulaire]
+          
+          #puts YAML::dump params
     end
     
     def require_same_user 

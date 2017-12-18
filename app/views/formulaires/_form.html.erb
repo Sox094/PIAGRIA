@@ -61,9 +61,9 @@
                                 </div>
                                 
                                 <!-- PLACER ICI LES CHOIX -->
-                                <%= f.fields_for :choixes do |fc| %>
-                                    <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
-                                    <%= fc.label :choix, "Rép" %>
+                                <%= f.fields_for :answers do |builder| %>
+                                    <%= builder.text_field :content, class: "form-control" %>  
+                                    <%= builder.label :content, "Rép" %>
                                     
 
                                 <% end %> 

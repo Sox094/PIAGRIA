@@ -12,8 +12,8 @@
                     <li> 
                         <%=h question.nom %> 
                         <ul>
-                            <%= for choix in question.choixes %>
-                                <li><%=h choix.choix %></li>
+                            <% for answer in question.answers %>
+                                <li><%=h answer.content %></li>
                             <% end %>
                         </ul>
                         </li>

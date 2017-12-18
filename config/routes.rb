@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :questions
-  resources :formulaires
+
   devise_for :users,
                :path => '', 
                :path_names => {:sign_in => 'login', :sign_out => 'logout', :edit => 'profile'}
@@ -11,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :formulaires
   resources :questions, only: [:destroy]
-  resources :choixes, only: [:destroy]
+  resources :answers, only: [:destroy]
 
   
   # The priority is based upon order of creation: first created -> highest priority.
