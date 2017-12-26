@@ -7,83 +7,48 @@
     <div class="panel-body">
         <div class= "col-md-10">
             <div class="form-group">
-                <%= form_for (@formulaire) do |f| %>
 
+                <%= form_for @formulaire do |f| %>
                 
-                <div class="row">
+                  <div class="row">
                     <div class="form-group col-md-8">
-                        <label>Nom du formulaire :</label>
-                            <%= f.text_field :name, placeholder: "Nom du formulaire", class: "form-control" %>
+                    <%= f.label :name, "Nom du formulaire" %><br />
+                    <%= f.text_field :name, class: "form-control" %>
                     </div>
-                </div>
-                <div class="row">
+                  </div>
+                  
+                  <div class="row">
                     <div class="form-group col-md-8">
-                        <label>Description du formulaire :</label>
-                            <%= f.text_area :description, placeholder: "Nom du formulaire", class: "form-control" %>
+                    <%= f.label :description, "Description du Formulaire" %><br />
+                    <%= f.text_area :description, class: "form-control" %>
                     </div>
-                </div>
+                  </div>
+                    <br/><hr/><br/>
                 
-                <br/>
-                <hr/>
-                <br/>
-                
-                <!-- PLACER ICI LES QUESTIONS  -->
                 <div class="col-md-1">
                     
                 </div>
-                <div class="col-md-9">  
-                                               
+                <div class="col-md-9"> 
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             Questions
                         </div>
-                                
                         <div class="panel-body">
-                                
-                        <%= f.fields_for :questions do |field| %> 
+                          <%= f.fields_for :questions do |builder| %>
+                          
+                            <%= render 'question_fields', f: builder %>
                             
-                                <div class="form-group">
-                                    
-                                    <%= field.text_field :nom, placeholder: "Nom de la question", class: "form-control" %>
-                                    <%= field.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
-                                    .keys), placeholder: "Type", class: "form-control" %>
-                       
-                                   <!-- Supprimer la question -->
-                                    <%= field.check_box :_destroy %>
-                                    <%= field.label :_destroy, "Suppr" %>
-                                    
-                                     <i class="fa fa-question-circle-o"  
-                                     title="Choix multiple : gngngngn - 
- Choix simple : gngngn -
- Réponse simple : gnngn"></i>
-
-        
-                                </div>
-                                
-                                <!-- PLACER ICI LES CHOIX -->
-                                <%= f.fields_for :answers do |builder| %>
-                                    <%= builder.text_field :content, class: "form-control" %>  
-                                    <%= builder.label :content, "Rép" %>
-                                    
-
-                                <% end %> 
-                                
-                        
-                        <% end %>
-                        
-                        </div>    
-                    </div>     
-
-
-                     <div class="actions">
+                          <% end %>
+                    </div>
+                </div>
+                  <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>
-                </div>
-                </div>
-
+                  </div>
+                  </div>
                 <% end %>
-            </div>    
+
+            </div>
         </div>
-
-
     </div>
 </div>
+
