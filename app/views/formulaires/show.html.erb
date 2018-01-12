@@ -27,5 +27,8 @@
 <ul class="pager">
     <li class="Edit"><%= link_to 'Edit', edit_formulaire_path(@formulaire) %>  </li>
     <li class="Retour"><%= link_to 'Back', formulaires_path %> </li>
+    
+    <li class="Repondre"><%= link_to 'Repondre', new_formulaire_poll_path(@formulaire) %> </li>
+    
 </ul>
 

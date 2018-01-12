@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  formulaire_id: 
   question_id: 
-  choix: MyString
+  answer_id: 
+  nom: MyString
 
 two:
+  formulaire_id: 
   question_id: 
-  choix: MyString
+  answer_id: 
+  nom: MyString

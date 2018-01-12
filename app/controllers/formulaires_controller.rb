@@ -21,7 +21,7 @@ def new
   @formulaire = Formulaire.new
   2.times do
     question = @formulaire.questions.build
-    3.times { question.answers.build }
+    2.times { question.answers.build }
   end
   
 end
@@ -33,9 +33,9 @@ end
   end
 
   def create
-    puts formulaire_params.inspect
-     @formulaire = Formulaire.new(formulaire_params)
-    #@formulaire = current_user.formulaires.create(formulaire_params)
+    #puts formulaire_params.inspect
+    #@formulaire = Formulaire.new(formulaire_params)
+    @formulaire = current_user.formulaires.new(formulaire_params)
       if @formulaire.save    # Si le form est sauvegardée dans la BDDon notifie le user
         redirect_to @formulaire, notice: "Votre formulaire a bien été crée"   #Cette config est mieux que la suivante
       else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
@@ -82,4 +82,8 @@ end
         flash[:danger] = "Vous n'avez pas les droits"
       end
     end
+    
+    def your polls
+    end
+    
 end

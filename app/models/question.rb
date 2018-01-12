@@ -6,7 +6,8 @@ class Question < ActiveRecord::Base
   #self.inheritance_column = nil
   enum typequestion: [:reponse_courte, :choix_multiple, :choix_simple]
   
-
+ validates :nom, presence: true
+  
   
 
 end

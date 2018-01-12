@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   resources :users, only: [:show]
-  resources :formulaires
+  resources :formulaires do
+    resources :polls
+  end
   resources :questions, only: [:destroy]
   resources :answers, only: [:destroy]
 
