@@ -42,6 +42,8 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'toastr-rails'
 gem 'hashie-forbidden_attributes', '~> 0.1.1'
+gem 'jquery-ui-rails'
+
 
 
 
