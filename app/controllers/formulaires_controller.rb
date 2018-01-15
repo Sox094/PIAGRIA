@@ -7,7 +7,7 @@ class FormulairesController < ApplicationController
   # GET /formulaires.json
 def index
     if current_user
-      @formulaires = current_user.formulaires
+      @formulaires = current_user.formulaires.page(params[:page]).per(10)
     else 
       @formulaires = Formulaire.all
     end
