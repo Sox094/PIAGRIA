@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226143736) do
+ActiveRecord::Schema.define(version: 20180115142941) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "question_id"
     t.string   "content"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "formulaire_id"
   end
+
+  add_index "answers", ["formulaire_id"], name: "index_answers_on_formulaire_id"
 
   create_table "choixes", force: :cascade do |t|
     t.integer  "question_id"
