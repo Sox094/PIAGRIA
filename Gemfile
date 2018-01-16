@@ -12,6 +12,10 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-script-source', '1.8.0'
+
+#Nested pour gérer le JS
+gem "nested_form"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -60,5 +64,10 @@ group :development do
   gem 'spring'
   # Kaminari gem to do the pagination of the forms
   gem 'kaminari'
+  #Kaminara does not work when a user is not logged
+  gem 'will_paginate', '~> 3.1.0'
+  # Gems pour gérer les adds et suppr de questions/réponses
+  gem 'jquery-turbolinks'
+  gem "cocoon"
 end
 
