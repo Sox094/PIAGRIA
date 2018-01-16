@@ -7,32 +7,32 @@ class FormulairesController < ApplicationController
   # GET /formulaires.json
 def index
     if current_user
-      @formulaires = current_user.formulaires.page(params[:page]).per(10)
+      @formulaires = current_user.formulaires.paginate(:page => params[:page], :per_page => 10)
     else 
-      @formulaires = Formulaire.all
+      @formulaires = Formulaire.all.paginate(:page => params[:page], :per_page => 10)
     end
 end
 
-  def show
+def show
     @questions = @formulaire.questions
-  end
+end
 
 def new
   @formulaire = Formulaire.new
-  2.times do
-    question = @formulaire.questions.build
-    2.times { question.answers.build }
-  end
-  
+  @question = @formulaire.questions.build
+  @question.answers.build
+    #2.times do
+    #question = @formulaire.questions.build
+    #2.times { question.answers.build }
+  #end
 end
   
-  def edit
-    
+def edit
     @formulaire = Formulaire.find(params[:id])
     #@formulaire.questions.new  #Ici on crée les champs de création de Question
-  end
+end
 
-  def create
+def create
     #puts formulaire_params.inspect
     #@formulaire = Formulaire.new(formulaire_params)
     @formulaire = current_user.formulaires.new(formulaire_params)
@@ -41,26 +41,26 @@ end
       else     #Si le form n'est pas crée alors l'user est redirigée vers la page de création new
         render :new
       end
-  end
+end
 
-  def update
+def update
   set_formulaire
     if @formulaire.update(formulaire_params)
       redirect_to @formulaire, notice: "Modification enregistrée"
     else
       render :edit
     end
-  end
+end
 
-  def destroy
+def destroy
     @formulaire.destroy
     respond_to do |format|
       format.html { redirect_to formulaires_url, notice: "Le formulaire a bien été détruit" }
       format.json { head :no_content }
     end
-  end
+end
 
-  private
+private
     # Use callbacks to share common setup or constraints between actions.
     def set_formulaire
       @formulaire = Formulaire.find(params[:id])
