@@ -19,12 +19,16 @@ end
 
 def new
   @formulaire = Formulaire.new
-  @question = @formulaire.questions.build
-  @question.answers.build
-    #2.times do
-    #question = @formulaire.questions.build
-    #2.times { question.answers.build }
-  #end
+  #@question = @formulaire.questions.build
+  #@answer = @question.answers.build
+
+    if false
+      @question.answers.build
+      2.times do
+      question = @formulaire.questions.build
+      2.times { question.answers.build }
+      end
+    end
 end
   
 def edit
@@ -46,7 +50,7 @@ end
 def update
   set_formulaire
     if @formulaire.update(formulaire_params)
-      redirect_to @formulaire, notice: "Modification enregistrée"
+      redirect_to @formulaire, notice: "Modification(s) enregistrée(s)"
     else
       render :edit
     end

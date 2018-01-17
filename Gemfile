@@ -21,8 +21,7 @@ gem "nested_form"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -47,7 +46,8 @@ gem 'rails-i18n'
 gem 'toastr-rails'
 gem 'hashie-forbidden_attributes', '~> 0.1.1'
 gem 'jquery-ui-rails'
-
+#Kind of Ajax
+gem 'turbolinks', '~> 5.0.0'
 
 
 
@@ -67,7 +67,5 @@ group :development do
   #Kaminara does not work when a user is not logged
   gem 'will_paginate', '~> 3.1.0'
   # Gems pour gérer les adds et suppr de questions/réponses
-  gem 'jquery-turbolinks'
   gem "cocoon"
 end
-

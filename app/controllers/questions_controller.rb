@@ -5,6 +5,9 @@ class QuestionsController < ApplicationController
    before_action :authenticate_user!, except: [:show]
    #before_action :require_same_user, only: [:edit, :update]
 
+def show 
+  @answers = @question.answers
+end
 
 
 def index
@@ -22,7 +25,7 @@ def new
 end
  def edit 
     @question = Question.find params[:id]
-    @question.choixes.new
+    @question.answers.new
 
  end
  

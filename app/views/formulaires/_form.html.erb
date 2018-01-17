@@ -35,10 +35,12 @@
                         </div>
                         <div class="panel-body">
                           <%= f.fields_for :questions do |builder| %>
-                          
+
                             <%= render 'question_fields', f: builder %>
                             
                           <% end %>
+                          <%= link_to_add_association 'add question', f, :questions %>
+
                     </div>
                 </div>
                   <div class="actions">
