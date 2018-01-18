@@ -8,7 +8,24 @@
         <div class= "col-md-10">
             <div class="form-group">
 
-                <%= form_for @formulaire do |f| %>
+            <%= form_for @formulaire do |f| %>
+              <% if @formulaire.errors.any? %> 
+                <div class="col-md-6">
+                    <div class="panel panel-danger">
+                          <div class="panel-heading">
+                            <h5>Erreurs :</h5>
+                          </div>
+                          <div class="panel-body">
+                                <ul>
+                                <% @formulaire.errors.full_messages.each do |message| %>
+                                    <li><%= message %></li>
+                                <% end %>
+                                </ul>
+                          </div>
+                        
+                  </div>    
+                </div>
+              <% end %>
                 
                   <div class="row">
                     <div class="form-group col-md-8">
@@ -39,9 +56,12 @@
                             <%= render 'question_fields', f: builder %>
                             
                           <% end %>
-                          <%= link_to_add_association 'add question', f, :questions %>
-
-                    </div>
+                          </div>
+          <div class="centerbutton">
+          <button type="button" class="btn btn-success btn-sm">
+                <%= link_to_add_association 'Ajouter une question', f, :questions %>
+          </button> 
+          </div>
                 </div>
                   <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>
