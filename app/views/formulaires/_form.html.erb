@@ -42,10 +42,8 @@
                   </div>
                     <br/><hr/><br/>
                 
-                <div class="col-md-1">
-                    
-                </div>
-                <div class="col-md-9"> 
+
+                <div class="col-md-11"> 
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             Questions
@@ -58,10 +56,8 @@
                           <% end %>
                           </div>
           <div class="centerbutton">
-          <button type="button" class="btn btn-success btn-sm">
-                <%= link_to_add_association 'Ajouter une question', f, :questions %>
-          </button> 
-          </div>
+                  <%= link_to_add_association 'Ajouter une question', f, :questions, class: "btn btn-success"   %>
+          </div></br>
                 </div>
                   <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>
