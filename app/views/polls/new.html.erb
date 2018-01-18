@@ -1,31 +1,22 @@
- <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
 
+ <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
+  <%  i = 0 %>
     <% for question in @formulaire.questions %>
 
         <li> 
-        <%=h question.nom %><%= question.id%> 
+        <%=h question.nom %> 
         <ul>
-            
+          
         <% for answer in question.answers %>
            
- <!--               
-        %=answer.id%>%= radio_button("poll", "answer_id", answer.id) %>  %=h answer.content %> <br/>
-         
-        %= f.hidden_field :question_id, value: @poll[question.id] %>
-        
-        Question.where(formulaire_id: 131)
- -->
-
-    <%= f.collection_radio_buttons :answer_id, question.answers.where(formulaire_id: 131), :id, :content %>
-
-
+                
+            <%= radio_button("poll", "answer_id", answer.id) %>  <%=h answer.content %> <br/>
+            
         <% end %>
-                   
+                 <% i=i+1 %>  
         </ul>
-        </li>
+        </li>  <% f.submit %>
     <% end %>
 
-  <%= f.submit %>
+<%= f.submit %>
 <% end %>
-
-
