@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //=require jquery-ui
 //= require bootstrap-sprockets
-//= require jquery_ujs
 //=require toastr
 //= require cocoon
 //= require jquery_nested_form
@@ -23,33 +22,6 @@
 
 toastr.options = {
     "positionClass":"toast-bottom-right"
-}
-
-document.addEventListener("turbolinks:load", function() {
-  $(document).ready(function(){
-    $('#remove_question').click(function(){
-    $('#bloc-questions input').prevAll("input[type=hidden]").first().val("1");
-    $('#remove_question').closest("#bloc-questions").hide();
-    
-  });
-
-  });
-});
-
-
-
-function remove_fields(link) {
-  $(link).previous("input[type=hidden]").value = "1";
-  $(link).up(".fields").hide();
-}
-
-
-function add_fields(link, association, content) { 
-    var new_id = new Date().getTime(); 
-    var regexp = new RegExp("new_" + association, "g"); 
-    $(link).parent().before(content.replace(regexp, new_id));
-    console.log("Ajout");
-  
 }
 
 
