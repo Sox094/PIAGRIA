@@ -3,6 +3,8 @@ class Question < ActiveRecord::Base
   has_many :answers, :dependent => :destroy
   accepts_nested_attributes_for :answers, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   
+  has_many :photos
+  
   #self.inheritance_column = nil
   enum typequestion: [:reponse_courte, :choix_multiple, :choix_simple]
   

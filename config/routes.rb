@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   resources :formulaires do
     resources :polls
   end
-  resources :questions, only: [:destroy]
+  resources :questions
   resources :answers, only: [:destroy]
+  resources :photos
 
   
   # The priority is based upon order of creation: first created -> highest priority.

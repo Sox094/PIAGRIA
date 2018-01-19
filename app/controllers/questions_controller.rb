@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
 
 def show 
   @answers = @question.answers
+  @photos = @question.photos
 end
 
 
@@ -20,22 +21,28 @@ def new
   #@formulaire = Formulaire.new
   #@question = @formulaire.questions.build
   @question = current_user.questions.new       
-     @question.choixes.new
+     #@question.choixes.new
 
 end
  def edit 
     @question = Question.find params[:id]
     @question.answers.new
+    @photos = @question.photos
 
  end
  
 def create
       @question = current_user.questions.new(question_params) # on crée une nvlle entrée dans la table Question en prenant en compte les variables precedents
-        
-    
+
       if @question.save    # Si le form est sauvegardée dans la BDDon notifie le user
         #redirect_to edit_formulaire_path(@formulaire), notice: "Votre q a bien été crée"
-        redirect_to @question, notice: "Votre question a bien été créee"
+        if params[:images]
+            params[:images].each do |i|
+              @question.photos.create(image: i)
+          end
+        end
+        @photos = @question.photos
+        redirect_to edit_question_path(@question), notice: "Votre question a bien été créee"
 
       else     #Si la q n'est pas crée alors l'user est redirigée vers la page de création new
 
@@ -66,7 +73,14 @@ def update
         #@question = Question.find params[:id]
 
     if @question.update(question_params)
-      redirect_to @question, notice: "Modification enregistrée"
+        #redirect_to edit_formulaire_path(@formulaire), notice: "Votre q a bien été crée"
+        if params[:images]
+            params[:images].each do |i|
+              @question.photos.create(image: i)
+          end
+        end
+        @photos = @question.photos
+      redirect_to edit_question_path(@question), notice: "Modification enregistrée"
     else
       render :edit
     end
@@ -77,15 +91,18 @@ def update
       end
     end
     
-end  
+end 
+
+
+
+
+
+
     def set_question
       @question = Question.find(params[:id])
     end
     
     def question_params         
     params.require(:question).permit(:nom, :typequestion, :media, choixes_attributes: [:id, :choix]) 
-   
-
-   
     end
 end

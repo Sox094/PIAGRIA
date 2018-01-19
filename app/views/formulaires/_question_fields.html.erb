@@ -12,6 +12,14 @@
                               title="Choix multiple : gngngngn - Choix simple : gngngn -   Réponse simple : gnngn">
                               </i> 
                     <%= link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash-o'%>
+            <div class="row">
+              <div class="col-md-4">
+                <span class="btn btn-default btn-file">
+                  <i class="fa fa-picture-o fa-lg"></i> 
+                  <%= file_field_tag "images[]", type: :file, multiple: :true %>
+                </span>
+              </div>
+            </div>                    
 
                 </span></br>
             

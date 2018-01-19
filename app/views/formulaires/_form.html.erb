@@ -49,7 +49,7 @@
                             Questions
                         </div>
                         <div class="panel-body">
-                          <%= f.fields_for :questions do |builder| %>
+                          <%= f.fields_for :questions, html: {multipart: true} do |builder| %>
 
                             <%= render 'question_fields', f: builder %>
                             
@@ -57,7 +57,10 @@
                           </div>
           <div class="centerbutton">
                   <%= link_to_add_association 'Ajouter une question', f, :questions, class: "btn btn-success"   %>
-          </div></br>
+          </div><br/>
+
+  
+  <div id="photos"><%= render 'photos/list' %></div>
                 </div>
                   <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>

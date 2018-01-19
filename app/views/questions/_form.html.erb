@@ -1,4 +1,4 @@
-<%= form_for(@question) do |f| %>
+<%= form_for (@question), html: {multipart: true} do |f| %>
   <!--
   <div class="field">
     <%= f.text_field :formulaire_id %>
@@ -17,19 +17,19 @@
             <%= f.select :typequestion,[["Choix multiples",1],["Choix simple",2],["Reponse courte",3]],prompt: "Sélectionner le type de qu", class: "form-control" %>
     </div>
   </div>
-  <!--
-  <div class="field">
-    <%= f.label :media %><br>
-    <%= f.text_field :media %>
-  </div>
-  -->
   
-    <!-- CHOIX  -->
-      <%= f.fields_for :choixes do |fc| %>
-        <%= fc.text_field :choix, placeholder: "-", class: "form-control" %>  
-    
-            
-      <% end %>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="btn btn-default btn-file">
+        <i class="fa fa-cloud-upload fa-lg"></i> DL vos photos 
+        <%= file_field_tag "images[]", type: :file, multiple: :true %>
+      </span>
+    </div>
+  </div>
+  
+  <div id="photos"><%= render 'photos/list' %></div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
