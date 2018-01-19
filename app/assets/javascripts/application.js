@@ -18,6 +18,11 @@
 //= require cocoon
 //= require jquery_nested_form
 //= require turbolinks
+//= require chart
+//= require chart2
+//= require nvd3
+//= require google
+//= require highcharts
 //= require_tree .
 
 toastr.options = {

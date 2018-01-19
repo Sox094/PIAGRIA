@@ -1,21 +1,33 @@
-
  <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
-  <%  i = 0 %>
+  <%  i = Poll.last.id+1 %>
     <% for question in @formulaire.questions %>
-
         <li> 
         <%=h question.nom %> 
         <ul>
-          
         <% for answer in question.answers %>
-           
-                
-            <%= radio_button("poll", "answer_id", answer.id) %>  <%=h answer.content %> <br/>
+            <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
+            <% a[0]["content"]%>
+            <% a[0]["question_id"] %>
+            
+            <% f.radio_button :answer_id, answer.id %>
+            <% f.label :answer_id, answer.id %>
+            
+            <%= f.radio_button :nom, answer.content %>
+            <%= f.label :nom, a[0]["content"] %>
+            
+            <% f.radio_button :question_id, answer.question_id %>
+            <% f.label :question_id, a[0]["question_id"] %>
+            
+            <%= f.hidden_field :answer_id, :value => answer.id %>
+            <%= f.hidden_field :question_id, :value => a[0]["question_id"] %>
+
+            <% answer.id %>
+            <% answer.content %> <br/>
             
         <% end %>
-                 <% i=i+1 %>  
+    <% i=i+1 %>  
         </ul>
-        </li>  <% f.submit %>
+        </li>  
     <% end %>
 
 <%= f.submit %>
