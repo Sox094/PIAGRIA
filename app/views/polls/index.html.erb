@@ -1,3 +1,10 @@
+<div class=col-md-6>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <%= @formulaire.name %>
+    </div>
+        <div class="panel-body">
+          
 <% for poll in @polls %>
   id du poll :<%= poll.id %> </br>
   formulaire id : <%= poll.formulaire_id %> </br>
@@ -5,3 +12,12 @@
   answer id : <%= poll.answer_id %> </br>
   content : <%= poll.nom %> </br></br>=================</br>
 <% end %>
+</div>
+</div>
+<ul class="pager">
+    <li class="Retour"><%= link_to 'Voir tous les formulaires', formulaires_path %> </li>
+    
+</ul>
+</br></br>
+</div>
+

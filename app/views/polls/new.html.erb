@@ -1,34 +1,27 @@
- <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
-  <%  i = Poll.last.id+1 %>
-    <% for question in @formulaire.questions %>
-        <li> 
-        <%=h question.nom %> 
-        <ul>
-        <% for answer in question.answers %>
-            <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
-            <% a[0]["content"]%>
-            <% a[0]["question_id"] %>
-            
-            <% f.radio_button :answer_id, answer.id %>
-            <% f.label :answer_id, answer.id %>
-            
-            <%= f.radio_button :nom, answer.content %>
-            <%= f.label :nom, a[0]["content"] %>
-            
-            <% f.radio_button :question_id, answer.question_id %>
-            <% f.label :question_id, a[0]["question_id"] %>
-            
-            <%= f.hidden_field :answer_id, :value => answer.id %>
-            <%= f.hidden_field :question_id, :value => a[0]["question_id"] %>
+<div class=col-md-6>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+        <%= @formulaire.name %>
+    </div>
+    <div class="panel-body">
 
-            <% answer.id %>
-            <% answer.content %> <br/>
-            
-        <% end %>
-    <% i=i+1 %>  
-        </ul>
-        </li>  
+        <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
+                <% @formulaire.questions.each_with_index do |question, i| %>
+                <li> 
+                    <%=h question.nom %>
+                    <ul>
+                    <% question.answers.each_with_index do |answer, j| %>
+                            <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
+                            <%= radio_button_tag :"nom_#{i}", answer.id %>
+                            <%= f.label :"nom_#{answer.content}", answer.content%>
+                            <br/>
+                    <% end %>
+                    </ul>
+                </li>  
+                <% end %>
+
+            <%= f.submit %>
     <% end %>
-
-<%= f.submit %>
-<% end %>
+    </div>
+  </div>
+</div>
