@@ -8,7 +8,6 @@ class Formulaire < ActiveRecord::Base
   
   
   validates :name, presence: true
-  validates :description, presence: true
 
     HUMANIZED_ATTRIBUTES = {
     :name => "Le nom du formulaire",

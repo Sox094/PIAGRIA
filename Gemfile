@@ -48,7 +48,7 @@ gem 'hashie-forbidden_attributes', '~> 0.1.1'
 gem 'jquery-ui-rails'
 #Kind of Ajax
 gem 'turbolinks', '~> 5.0.0'
-
+gem "paperclip"
 
 
 group :development, :test do
