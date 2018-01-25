@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124211943) do
+ActiveRecord::Schema.define(version: 20180115142941) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "question_id"
@@ -23,14 +23,14 @@ ActiveRecord::Schema.define(version: 20180124211943) do
 
   add_index "answers", ["formulaire_id"], name: "index_answers_on_formulaire_id"
 
-  create_table "chart_tests", force: :cascade do |t|
-    t.integer  "formulaire_id"
+  create_table "choixes", force: :cascade do |t|
     t.integer  "question_id"
-    t.integer  "answer_id"
-    t.string   "nom"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "choix"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "choixes", ["question_id"], name: "index_choixes_on_question_id"
 
   create_table "forms", force: :cascade do |t|
     t.string   "nom"
@@ -53,18 +53,6 @@ ActiveRecord::Schema.define(version: 20180124211943) do
 
   add_index "formulaires", ["user_id"], name: "index_formulaires_on_user_id"
 
-  create_table "photos", force: :cascade do |t|
-    t.integer  "question_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "photos", ["question_id"], name: "index_photos_on_question_id"
-
   create_table "polls", force: :cascade do |t|
     t.integer  "formulaire_id"
     t.integer  "question_id"
@@ -83,13 +71,9 @@ ActiveRecord::Schema.define(version: 20180124211943) do
     t.string   "nom"
     t.integer  "typequestion"
     t.string   "media"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   add_index "questions", ["formulaire_id"], name: "index_questions_on_formulaire_id"
