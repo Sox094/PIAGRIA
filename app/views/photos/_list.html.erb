@@ -1,4 +1,7 @@
-<% if @photos %>
+ <div class=row">
+ <% for question in @formulaire.questions %>
+    <%= image_tag question.image %> 
+<% end %>
 
     <div class="row">
         <% @photos.each do |photo| %>

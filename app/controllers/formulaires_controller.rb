@@ -15,6 +15,7 @@ end
 
 def show
     @questions = @formulaire.questions
+    #@photos = @questions.photos
 end
 
 def new
@@ -34,6 +35,7 @@ end
 def edit
     @formulaire = Formulaire.find(params[:id])
     #@formulaire.questions.new  #Ici on crée les champs de création de Question
+    
 end
 
 def create
@@ -59,10 +61,28 @@ end
 def destroy
     @formulaire.destroy
     respond_to do |format|
-      format.html { redirect_to formulaires_url, notice: "Le formulaire a bien été détruit" }
+      format.html { redirect_to formulaires_url, notice: "Le formulaire a bien été supprimé" }
       format.json { head :no_content }
     end
 end
+
+
+def duplicate
+  template = Formulaire.find(params[:id])
+  @formulaire= template.dup
+  @formulaire.save
+  
+  #for question in @formulaire.questions
+  #  question.dup
+  #  question.save
+  #end
+  
+  template2 = Question.where(formulaire_id: 47)
+  @question = template2.dup
+  @question.save
+  redirect_to @formulaire, notice: "Formulaire dupliqué"
+end
+
 
 private
     # Use callbacks to share common setup or constraints between actions.
@@ -75,7 +95,7 @@ private
    
     def formulaire_params
           params.require(:formulaire).permit(:name, :description, 
-                  questions_attributes: [:id, :nom, :typequestion, '_destroy', 
+                  questions_attributes: [:id, :nom, :typequestion, :image, '_destroy', photos_attributes:[:id],
                       answers_attributes:[:id, :content,'_destroy']]) if params[:formulaire]
           
           #puts YAML::dump params

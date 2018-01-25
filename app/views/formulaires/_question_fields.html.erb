@@ -1,25 +1,25 @@
 <div class="nested">
    <div class ="nested-fields">  
-       </br>
+
           <hr>
             <%= f.label :nom, "Question :" %> </br>
                 <span>
-                  <%= f.text_field :nom, placeholder: "Nom de la question", size: 75%>
-                  <%= f.label :typequestion, "Type de question" %>
+
+                  <%= f.text_area :nom, placeholder: "Intitulé de la question", cols: 130, rows: 2, class: "form-control" %></br>
+                  <%= f.label :typequestion, "Type de question"  %>
                   <%= f.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                   .keys), placeholder: "Type", class: "form-control" %>
                               <i class="fa fa-question-circle-o"  
-                              title="Choix multiple : gngngngn - Choix simple : gngngn -   Réponse simple : gnngn">
+                              title="Choix multiple : Plusieurs réponses à la question - Choix simple : Une seule réponse par question -   Réponse simple : Champ libre (max, 100 caractères">
                               </i> 
-                    <%= link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash-o'%>
-            <div class="row">
-              <div class="col-md-4">
-                <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-lg"></i> 
-                  <%= file_field_tag "images[]", type: :file, multiple: :true %>
-                </span>
+              <div class="row">
+                <div class="col-md-4">
+                  <%= f.file_field :image, title: "Ajouter une image pour illustrer votre question" %>
               </div>
-            </div>                    
+              <div class="col-md-6"></div>
+                <%= link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash-o', title: 'Supprimer la question' %><br/>
+
+            </div> 
 
                 </span></br>
             
@@ -29,7 +29,7 @@
             
         </hr>
               <span>
-                    <%= link_to_add_association 'Ajouter une option', f, :answers, class: "btn btn-primary" %>
+                    <%= link_to_add_association 'Ajouter un choix', f, :answers, class: "btn btn-primary" %>
               </span> <br/> 
   </div> 
 </div>

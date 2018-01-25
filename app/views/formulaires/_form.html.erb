@@ -8,7 +8,7 @@
         <div class= "col-md-10">
             <div class="form-group">
 
-            <%= form_for @formulaire do |f| %>
+            <%= form_for @formulaire, html: {multipart: true} do |f| %>
               <% if @formulaire.errors.any? %> 
                 <div class="col-md-6">
                     <div class="panel panel-danger">
@@ -60,7 +60,6 @@
           </div><br/>
 
   
-  <div id="photos"><%= render 'photos/list' %></div>
                 </div>
                   <div class="actions">
                     <%= f.submit "Valider le formulaire", class:"pull-right btn btn-primary" %>

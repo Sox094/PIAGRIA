@@ -10,10 +10,16 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :formulaires do
     resources :polls
+    member do
+    get 'duplicate'
+  end
   end
   resources :questions
   resources :answers, only: [:destroy]
   resources :photos
+  
+  get 'formulaires/:id(.:format)/copy' => 'formulaires#copy'
+
 
   
   # The priority is based upon order of creation: first created -> highest priority.
