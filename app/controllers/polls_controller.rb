@@ -8,9 +8,14 @@ class PollsController < ApplicationController
         @formulaire = Formulaire.find(params[:formulaire_id])
         @polls = @formulaire.polls.order("created_at DESC")
         @polls = Poll.where(formulaire_id: @formulaire)
+        
+        @polls2 = @polls.group("nom") 
+        
         @answers = Answer.where(formulaire_id: @formulaire_id)
         @selecto = 3
         #@answers = Answer.where(Answer.id = @polls.answer_id)
+
+    
 
     end
     
