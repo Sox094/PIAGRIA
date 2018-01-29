@@ -19,7 +19,7 @@
 //= require jquery_nested_form
 //= require turbolinks
 
-
+//= require trix
 //= require_tree .
 
 toastr.options = {

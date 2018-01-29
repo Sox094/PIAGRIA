@@ -49,6 +49,9 @@ gem 'jquery-ui-rails'
 #Kind of Ajax
 gem 'turbolinks', '~> 5.0.0'
 gem "paperclip"
+gem 'chart-js-rails'
+gem 'trix'
+
 
 
 group :development, :test do

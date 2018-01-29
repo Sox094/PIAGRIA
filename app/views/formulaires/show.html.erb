@@ -10,7 +10,7 @@
             <ol>
                 <% for question in @formulaire.questions %>
                     <li> 
-                        <%=h question.nom %>
+                        <%=h question.nom.html_safe %>
                         <div class="row" id="imageshow">
                             <% if question.image_content_type != nil %>
                                 <%= image_tag question.image %>
@@ -35,4 +35,5 @@
     <li class="Repondre"><%= link_to 'Repondre', new_formulaire_poll_path(@formulaire) %> </li>
     <li class="Dupliquer"><%= link_to 'Dupliquer', duplicate_formulaire_path(@formulaire)  %> </li> 
 </ul>
+
 
