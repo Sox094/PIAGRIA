@@ -7,9 +7,11 @@ class FormulairesController < ApplicationController
   # GET /formulaires.json
 def index
     if current_user
-      @formulaires = current_user.formulaires.paginate(:page => params[:page], :per_page => 10)
+      @formulaires = current_user.formulaires.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
+      
+
     else 
-      @formulaires = Formulaire.all.paginate(:page => params[:page], :per_page => 10)
+      @formulaires = Formulaire.all.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
     end
 end
 
@@ -55,21 +57,37 @@ def update
       render :edit
     end
 end
-def duplicate
+
+def duplicate2
  template = Formulaire.find(params[:id])
  @formulaire= template.dup
  @formulaire.save
 
- #for question in @formulaire.questions
- #  question.dup
- #  question.save
- #end
+questiondup = Question.new
+questiondup = template.questions
 
- #template2 = Question.where(formulaire_id: 47)
+ for question in template.questions
+   question.dup
+   question.save
+   puts "BBBB" + question.to_s
+ end
+
+ #template2 = Question.where(formulaire_id: template).first
  #@question = template2.dup
  #@question.save
- redirect_to @formulaire, notice: "Formulaire dupliqué"
+  redirect_to @formulaire, notice: "Formulaire dupliqué"
 end
+  
+def  duplicate
+ formulaire = Formulaire.find(params[:id])
+ #create new object with attributes of existing record 
+ @formulaire2 = formulaire.dup
+ @formulaire2.save
+  redirect_to @formulaire2, notice: "Formulaire dupliqué"
+end
+
+
+
 def destroy
     @formulaire.destroy
     respond_to do |format|
