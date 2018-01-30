@@ -10,7 +10,7 @@
                   <%= f.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                   .keys), placeholder: "Type", class: "form-control" %>
                               <i class="fa fa-question-circle-o"  
-                              title="Choix multiple : Plusieurs réponses à la question - Choix simple : Une seule réponse par question -   Réponse simple : Champ libre (max, 100 caractères">
+                              title="Choix multiple : Réponse simple : Champ libre (max, 100 caractères) - Plusieurs réponses à la question - Choix simple : Une seule réponse par question ">
                               </i> 
               <div class="row">
                 <div class="col-md-4">
