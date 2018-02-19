@@ -20,31 +20,43 @@
 </ul>
 </br></br>
 </div>
+<div class="clearfix"></div>
 
+<!-- ===================================================== Affichage chart =============================================== -->
+    <% (0..@nbquestion.to_i-1).each do |i| %> 
+        <div class="col-md-6">
+            <div class="panel panel-success", style="width:500px; height:300px;">
+                    <div class="panel-heading">
+                        <%= Question.where(formulaire_id: @formulaire)[i].nom.html_safe %>
+                        <!-- On récupère le nb de question et on display n fois -->
+                        <% i  %>
+                        <% @poll_curr = @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]) %>
+                        <!-- On get tous les résultats de la question en cours -->
+                    </div>
+                        <div class="panel-body">
+                              <canvas id=<%="myChart_#{i}"%>> dzdzdzdzd </canvas>
+                        </div>
+            </div>  
+        </div>
 
-<canvas id="myChart" ></canvas>
-<canvas id="myChart2" ></canvas>
-<canvas id="myChart" ></canvas>
-
+<!-- ===================================================== fin boucle affichage chart =============================================== -->
 
 <script>
-var ctx = document.getElementById("myChart").getContext('2d');
-
-
-labels= [<% for rep in @polls7 %>
-         "<%= rep.nom %>",
+var ctx = document.getElementById("<%="myChart_#{i}"%>").getContext('2d');
+labels= [<% (0..@polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.size-1).each do |rep| %>
+         "<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom")[rep].nom %>",
         <% end %>];
         
-i =<%= @polls7.count.values %>;
-
+j = <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.values%>;
+<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.values%>
 
 var myChart = new Chart(ctx, {
     type: 'bar',
     data:  {
         labels:labels,
         datasets: [{
-            label: '',
-            data: i,
+            label: ' er',
+            data: j,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -74,62 +86,10 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-
-var ctx = document.getElementById("myChart2").getContext('2d');
-
-
-labels= [<% for rep in @polls7 %>
-         "<%= rep.nom %>",
-        <% end %>];
-        
-i =<%= @polls7.count.values %>;
-
-
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data:  {
-        labels:labels,
-        datasets: [{
-            label: '',
-            data: i,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+myChart.options.legend.display = false;
 
 </script>
 
-
-
-
-
-
-
-
-
-
+    <%end%>
+<div class="clearfix"></div>
+</br></br></br>

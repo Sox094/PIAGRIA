@@ -6,18 +6,15 @@ class PollsController < ApplicationController
     end
     def index
         @formulaire = Formulaire.find(params[:formulaire_id])
-        
         @questions = @formulaire.questions
         
         @polls = @formulaire.polls.order("created_at DESC")
         @polls = Poll.where(formulaire_id: @formulaire)
-  
-        
-        @polls4 = @polls.where(question_id: 4).group("nom")
-        @polls5 = @polls.where(question_id: 5).group("nom")
-        @polls7 = @polls.where(question_id: 7).group("nom")
+        @nbpoll = Poll.where(formulaire_id: @formulaire.id).count
+        @nbquestion = Question.where(formulaire_id: @formulaire.id).count
+        @polls397 = @polls.where(question_id: 397).group("nom")
+        @polls398 = @polls.where(question_id: 398).group("nom")
 
-         
     end
     
     def show
