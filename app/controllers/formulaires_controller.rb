@@ -58,32 +58,56 @@ def update
     end
 end
 
-def duplicate2
- template = Formulaire.find(params[:id])
- @formulaire= template.dup
- @formulaire.save
-
-questiondup = Question.new
-questiondup = template.questions
-
- for question in template.questions
-   question.dup
-   question.save
-   puts "BBBB" + question.to_s
- end
-
- #template2 = Question.where(formulaire_id: template).first
- #@question = template2.dup
- #@question.save
-  redirect_to @formulaire, notice: "Formulaire dupliqué"
-end
-  
 def  duplicate
+  
+  #===================================================== Duplique le formulaire (id nom, description) ==============================================
  formulaire = Formulaire.find(params[:id])
  #create new object with attributes of existing record 
  @formulaire2 = formulaire.dup
  @formulaire2.save
-  redirect_to @formulaire2, notice: "Formulaire dupliqué"
+#===================================================================================================================================================
+#================================================================== Duplique les questions =========================================================
+ a= Question.find_by_sql(["Select * from questions where formulaire_id=?", formulaire.id]).as_json
+ a_size = Question.find_by_sql(["Select * from questions where formulaire_id=?", formulaire.id]).size
+     liste_question= []                                         #Liste des id des questions a récupérer pour écrire les réponses
+b = []
+(0..a_size-1).each do |i|
+
+  Question.create formulaire_id: (@formulaire2.id), #On recupère le  formulaire_id contenant toutes les questions
+                  nom: (a[i]["nom"]), 
+                  typequestion: (a[i]["typequestion"]), 
+                  media: (a[i]["media"]), 
+                  user_id: (a[i]["user_id"]),
+                  image_file_name: (a[i]["image_file_name"]),
+                  image_content_type:(a[i]["image_content_type"]),
+                  image_file_size: (a[0]["image_file_size"])
+                  
+#=================================================================================================================================================
+                  
+  liste_question.push(Question.find_by_sql(["Select * from questions where formulaire_id=?", formulaire.id]).as_json[i]["id"])
+  #On veut récupérer la liste des questions id de base pour récupérer nos infos
+  #Question.find_by_sql(["Select * from questions where formulaire_id=?", @formulaire2.id])[i].id)
+
+#================================================================ Duplique les réponses ==========================================================
+
+    b = Answer.find_by_sql(["Select * From answers where question_id=?", liste_question[i]]).as_json
+    b_size = Answer.find_by_sql(["Select * From answers where question_id=?",liste_question[i]]).size
+
+    (0..b_size-1).each do |j|              #On met ensuite nos nouveaux infos dans les bons questions id
+        Answer.create formulaire_id: (@formulaire2.id),
+                      question_id: (Question.find_by_sql(["Select * from questions where formulaire_id=?", @formulaire2.id]).as_json[i]["id"]),
+                      content: (Answer.find_by_sql(["Select * From answers where question_id=?",liste_question[i]])[j]["content"])
+    end
+end
+#===============================================================================================================================================
+  #render :text => b.inspect   #Récupère les bons questions id à duppliquer
+  if @formulaire2.save
+    #render :text => liste_question[0].inspect   #Récupère les bons questions id à duppliquer
+    redirect_to @formulaire2 ,notice: "Formulaire dupliqué"
+  else
+    render :new # This can be a render or redirect or whatever should happen if it fails
+  end
+  
 end
 
 

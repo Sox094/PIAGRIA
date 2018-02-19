@@ -8,23 +8,23 @@
         <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
                 <% @formulaire.questions.each_with_index do |question, i| %>
                 <li> 
-                    <%= question.nom %>
+                    <%= question.nom.html_safe %>
                     <ul>
                        <% if question.typequestion == "choix_multiple"%>
                             <% question.answers.each_with_index do |answer, j| %>
                                     <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
                                     <%= check_box_tag :"nom_#{i}_#{j}", answer.id %> 
-                                    <%= f.label :"nom_#{answer.content}", answer.content%> <%= answer.id%>
+                                    <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
                                     <br/>
                             <% end %>
                         <% elsif question.typequestion == "choix_simple"%>
                             <% question.answers.each_with_index do |answer, j| %>
                                     <%= radio_button_tag :"nom_#{i}", answer.id %> 
-                                    <%= f.label :"nom_#{answer.content}", answer.content%> <%= answer.id%>
+                                    <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
                                     <br/>
                             <% end %>
                         <% else %>
-                                    </br><%= text_area_tag :"champs_#{i}", "", class: "form-control"%> <%= question.id%>
+                                    </br><%= text_area_tag :"champs_#{i}", "", class: "form-control"%> <% question.id%>
                         <%end%>
                     </ul>
                 </li>  

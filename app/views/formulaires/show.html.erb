@@ -29,11 +29,12 @@
 
 
 <ul class="pager">
-    <li class="Edit"><%= link_to 'Edit', edit_formulaire_path(@formulaire) %>  </li>
-    <li class="Retour"><%= link_to 'Back', formulaires_path %> </li>
-    
-    <li class="Repondre"><%= link_to 'Repondre', new_formulaire_poll_path(@formulaire) %> </li>
+    <li class="Retour"><%= link_to 'Retour', formulaires_path %> </li>
+    <li class="Edit"><%= link_to 'Editer', edit_formulaire_path(@formulaire) %>  </li>
+    <li class="Repondre"><%= link_to 'Répondre', new_formulaire_poll_path(@formulaire) %> </li>
     <li class="Dupliquer"><%= link_to 'Dupliquer', duplicate_formulaire_path(@formulaire)  %> </li> 
+    <li class="Voir les réponses"><%= link_to 'Voir tous les réponses', formulaires_path %> </li>
+
 </ul>
 
 
