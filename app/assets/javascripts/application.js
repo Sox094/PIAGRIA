@@ -18,7 +18,7 @@
 //= require cocoon
 //= require jquery_nested_form
 //= require turbolinks
-
+//= require Chart.min
 //= require trix
 //= require_tree .
 
