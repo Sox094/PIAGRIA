@@ -30,7 +30,7 @@ console.log("")
                 <li>
               
 
-                    <%= question.nom.html_safe %><%= question.maxmultiplechoice%></br>
+                    <%= question.nom.html_safe %><%= question.maxmultiplechoice%>
                             <% if question.image_content_type != nil %>
                     <%= image_tag(question.image, :size => "400x400" )%>
                             <% end %>
