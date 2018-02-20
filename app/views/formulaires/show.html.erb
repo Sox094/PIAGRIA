@@ -17,7 +17,9 @@
                             <% end %>
                         </div>                  <ul>
                             <% for answer in question.answers %>
+                                <% if (question.typequestion == 'choix_simple' || question.typequestion== 'choix_multiple') %>
                                 <li><%=h answer.content %></li>
+                                <%end%>
                             <% end %>
                         </ul>
                         </li>

@@ -38,7 +38,7 @@
 <script>
 var ctx = document.getElementById("<%="myChart_#{i}"%>").getContext('2d');
 labels= [<% (0..@polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.size-1).each do |rep| %>
-         "<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom")[rep].nom %>",
+         "<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom")[rep].nom.html_safe %>",
         <% end %>];
         
 j = <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.values%>;
