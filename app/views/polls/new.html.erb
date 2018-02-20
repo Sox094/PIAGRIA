@@ -11,6 +11,8 @@ var MyForm=this.parentNode.id;
   }
 });
 
+console.log("ok");
+console.log("")
 });
 
 </script>
@@ -28,7 +30,8 @@ var MyForm=this.parentNode.id;
                 <li>
               
 
-                    <%= question.nom.html_safe %><%= question.maxmultiplechoice%>
+                    <%= question.nom.html_safe %><%= question.maxmultiplechoice%></br>
+                    <%= image_tag(question.image, :size => "400x400" )%>
                        <% if question.typequestion == "choix_multiple"%>
                               <div id=<%="form_#{i}"%>>
 
