@@ -21,10 +21,10 @@
         <div class="col-md-6">
             <div class="panel panel-info", style="width:500px; height:400px;">
                     <div class="panel-heading">
-                        <%= Question.where(formulaire_id: @formulaire)[i].nom.html_safe %>
+                        <b>Question <%=i+1  %> :</b><%= Question.where(formulaire_id: @formulaire)[i].nom.html_safe %>
                         <!-- On récupère le nb de question et on display n fois -->
                         <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire)[i]).length  %> réponses
-                        <% @poll_curr = @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]) %>
+                        <i><% @poll_curr = @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]) %></i>
                         <!-- On get tous les résultats de la question en cours -->
                     </div>
                         <div class="panel-body">
@@ -126,7 +126,7 @@ var myChart = new Chart(ctx, {
 
 </div>
 <div class="clearfix"></div>
-</br></br></br>
+</br></br>
 <ul class="pager">
     <li class="Retour"><%= link_to 'Voir tous les formulaires', formulaires_path %> </li>
     
