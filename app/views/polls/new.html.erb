@@ -28,23 +28,20 @@ console.log("")
         <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
                 <% @formulaire.questions.each_with_index do |question, i| %>
                 <li>
-              
-
-                    <%= question.nom.html_safe %><%= question.maxmultiplechoice%>
+        <span> <U>Question <%= i+1 %></U> : &nbsp;&nbsp;<%= question.nom.html_safe %>&nbsp;&nbsp;<%= question.maxmultiplechoice%></span>
                             <% if question.image_content_type != nil %>
-                    <%= image_tag(question.image, :size => "400x400" )%>
+                                        <%= image_tag(question.image, :size => "400x400" )%>
                             <% end %>
-                       <% if question.typequestion == "choix_multiple"%>
-                              <div id=<%="form_#{i}"%>>
-
-                            <% question.answers.each_with_index do |answer, j| %>
+                        <% if question.typequestion == "choix_multiple"%>
+                            <div id=<%="form_#{i}"%>>
+                                    <% question.answers.each_with_index do |answer, j| %>
                                     
                                     <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
                                     <%= check_box_tag :"nom_#{i}_#{j}", answer.id %> 
                                     <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
                                     <br/>
                                     
-                            <% end %>
+                        <% end %>
                             </div>
                         <% elsif question.typequestion == "choix_simple"%>
                             <% question.answers.each_with_index do |answer, j| %>
@@ -57,7 +54,7 @@ console.log("")
                         <%end%>
 
 
-                </li>  
+                </li>  </br>
                 <% end %>
 
             <%= f.submit "Valider les réponses", class:"pull-right btn btn-primary" %>
