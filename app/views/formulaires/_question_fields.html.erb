@@ -5,19 +5,20 @@
             <%= f.label :nom, "Question :" %> </br>
                 <span>
 
-                  <%= f.trix_editor :nom, placeholder: "Intitulé de la question", cols: 130, rows: 2, class: "form-control" %></br>
+                  <%= f.text_area :nom, placeholder: "Intitulé de la question", cols: 130, rows: 2, class: "form-control" %></br>
                   <%= f.label :typequestion, "Type de question"  %>
                   <%= f.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                   .keys), placeholder: "Type", class: "form-control" %>
                               <i class="fa fa-question-circle-o"  
                               title="Choix multiple : Réponse simple : Champ libre (max, 100 caractères) - Plusieurs réponses à la question - Choix simple : Une seule réponse par question ">
                               </i> 
+                  <%= f.number_field :maxmultiplechoice %>
               <div class="row">
                 <div class="col-md-4">
                   <%= f.file_field :image, title: "Ajouter une image pour illustrer votre question" %>
               </div>
               <div class="col-md-6"></div>
-                <%= link_to_remove_association '', f, class: 'btn btn-danger fa fa-trash-o', title: 'Supprimer la question' %><br/>
+                <%= link_to_remove_association '', f,class: 'btn btn-danger fa fa-trash-o', title: 'Supprimer la question' %><br/>
 
             </div> 
 
