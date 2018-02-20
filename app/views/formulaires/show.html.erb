@@ -13,7 +13,7 @@
                         <%=h question.nom.html_safe %>
                         <div class="row" id="imageshow">
                             <% if question.image_content_type != nil %>
-                                <%= image_tag question.image %>
+                    <%= image_tag(question.image, :size => "400x400" )%>
                             <% end %>
                         </div>                  <ul>
                             <% for answer in question.answers %>

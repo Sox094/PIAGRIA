@@ -31,7 +31,9 @@ console.log("")
               
 
                     <%= question.nom.html_safe %><%= question.maxmultiplechoice%></br>
+                            <% if question.image_content_type != nil %>
                     <%= image_tag(question.image, :size => "400x400" )%>
+                            <% end %>
                        <% if question.typequestion == "choix_multiple"%>
                               <div id=<%="form_#{i}"%>>
 
