@@ -50,7 +50,13 @@ gem 'turbolinks', '~> 5.0.0'
 gem "paperclip"
 gem 'chart-js-rails'
 gem 'trix'
-
+gem "wysiwyg-rails"
+  # Kaminari gem to do the pagination of the forms
+  gem 'kaminari'
+  #Kaminara does not work when a user is not logged
+  gem 'will_paginate', '~> 3.1.0'
+  # Gems pour gérer les adds et suppr de questions/réponses
+  gem "cocoon"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,12 +71,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  # Kaminari gem to do the pagination of the forms
-  gem 'kaminari'
-  #Kaminara does not work when a user is not logged
-  gem 'will_paginate', '~> 3.1.0'
-  # Gems pour gérer les adds et suppr de questions/réponses
-  gem "cocoon"
+
 end
 
 group :production do
