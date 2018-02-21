@@ -5,7 +5,7 @@
             <%= f.label :nom, "Question :" %> </br>
                 <span>
 
-                  <%= f.text_area :nom, placeholder: "Intitulé de la question", cols: 130, rows: 2, class: "form-control" %></br>
+                  <%= f.trix_editor :nom, placeholder: "Intitulé de la question", cols: 130, rows: 2, class: "form-control" %></br>
                   <%= f.label :typequestion, "Type de question"  %>
                   <%= f.select :typequestion, Question.typequestions.keys.map(&:humanize).zip(Question.typequestions
                   .keys), placeholder: "Type", class: "form-control" %>

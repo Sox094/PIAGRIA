@@ -1,6 +1,6 @@
 <!-- Script JS pour limiter le cochage des question choix multiples -->
 <script>
-
+/*
     $(function() {
 $('div input[type=checkbox]').on('change', function(e) {
 var MyForm=this.parentNode.id;
@@ -14,7 +14,7 @@ var MyForm=this.parentNode.id;
 console.log("ok");
 console.log("")
 });
-
+*/
 </script>
 
 
@@ -28,35 +28,44 @@ console.log("")
         <%= form_for([@formulaire, @formulaire.polls.new]) do |f| %>
                 <% @formulaire.questions.each_with_index do |question, i| %>
                 <li>
-        <span> <U>Question <%= i+1 %></U> : &nbsp;&nbsp;<%= question.nom.html_safe %>&nbsp;&nbsp;<%= question.maxmultiplechoice%></span>
+                <span> <U>Question <%= i+1 %></U> : &nbsp;&nbsp;<%= question.nom.html_safe %>
+                        <% question.maxmultiplechoice%>
+                </span>
+                    <div class="row" id="imageshow">
                             <% if question.image_content_type != nil %>
-                                        <%= image_tag(question.image, :size => "400x400" )%>
-                            <% end %>
-                        <% if question.typequestion == "choix_multiple"%>
-                            <div id=<%="form_#{i}"%>>
-                                    <% question.answers.each_with_index do |answer, j| %>
-                                    
-                                    <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
-                                    <%= check_box_tag :"nom_#{i}_#{j}", answer.id %> 
-                                    <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
-                                    <br/>
-                                    
-                        <% end %>
-                            </div>
-                        <% elsif question.typequestion == "choix_simple"%>
-                            <% question.answers.each_with_index do |answer, j| %>
-                                    <%= radio_button_tag :"nom_#{i}", answer.id %> 
-                                    <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
-                                    <br/>
-                            <% end %>
-                        <% else %>
-                                    </br><%= text_area_tag :"champs_#{i}", "", class: "form-control"%> <% question.id%>
-                        <%end%>
+                                            <br/> </br>
 
-
-                </li>  </br>
+                                    <div class = "container">
+                                        <div class="col-md-2 col-md-offset-1">
+                                            <%= image_tag(question.image, :size => "400x400" )%>
+                                        </div>
+                                    </div>
+                            <% end %>
+                    </div>     
+    <div id="indenterResp">                
+        <% if question.typequestion == "choix_multiple"%>
+            <div id=<%="form_#{i}"%>>
+                <% question.answers.each_with_index do |answer, j| %>
+                                    
+                <%  a= Answer.find_by_sql(["Select * from answers where id=?", answer.id]).as_json(only: [:question_id,:content]) %>
+                <%= check_box_tag :"nom_#{i}_#{j}", answer.id %> 
+                <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
+                <br/>
+                                    
+        <% end %>
+            </div>
+        <% elsif question.typequestion == "choix_simple"%>
+                <% question.answers.each_with_index do |answer, j| %>
+                        <%= radio_button_tag :"nom_#{i}", answer.id %> 
+                        <%= f.label :"nom_#{answer.content}", answer.content%> <% answer.id%>
+                        <br/>
                 <% end %>
-
+        <% else %>
+                </br><%= text_area_tag :"champs_#{i}", "", class: "form-control"%> <% question.id%>
+        <%end%>
+    </div>
+                </li></br>
+                <% end %>
             <%= f.submit "Valider les réponses", class:"pull-right btn btn-primary" %>
     <% end %>
     </div>

@@ -13,9 +13,14 @@
                         <%=h question.nom.html_safe %>
                         <div class="row" id="imageshow">
                             <% if question.image_content_type != nil %>
-                    <%= image_tag(question.image, :size => "400x400" )%>
+                                <div class = "container">
+                                    <div class="col-md-2 col-md-offset-1">
+                                        <%= image_tag(question.image, :size => "400x400" )%>
+                                    </div>
+                                </div>
                             <% end %>
-                        </div>                  <ul>
+                        </div>                  
+                        <ul>
                             <% for answer in question.answers %>
                                 <% if (question.typequestion == 'choix_simple' || question.typequestion== 'choix_multiple') %>
                                 <li><%=h answer.content %></li>

@@ -70,7 +70,7 @@ html {
 
 .form-control {
     min-width: 0;
-    width: 55% !important;
+    width: 100% !important;
 }
 
 .panel-heading.preview {
@@ -84,4 +84,8 @@ html {
 #imageshow {
     max-width: 300;
     height: 400;
+}
+
+#indenterResp {
+    margin-left : 30px;
 }
