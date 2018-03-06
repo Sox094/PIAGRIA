@@ -16,6 +16,10 @@
                               title="Choix multiple : Réponse simple : Champ libre (max, 100 caractères) - Plusieurs réponses à la question - Choix simple : Une seule réponse par question ">
                               </i> 
                   <%= f.number_field :maxmultiplechoice %>
+                  
+                  <%= f.label :obligatoire, "Réponse obligatoire"  %>
+                  <%= f.check_box :obligatoire %>
+
               <div class="row">
                 <div class="col-md-4">
                   <%= f.file_field :image, title: "Ajouter une image pour illustrer votre question" %>

@@ -131,7 +131,7 @@ private
    
     def formulaire_params
           params.require(:formulaire).permit(:name, :description, 
-                  questions_attributes: [:id, :nom, :typequestion, :image, :maxmultiplechoice, '_destroy', 
+                  questions_attributes: [:id, :nom, :typequestion, :image, :maxmultiplechoice, :obligatoire, '_destroy', 
                       answers_attributes:[:id, :content,'_destroy']]) if params[:formulaire]
           
           #puts YAML::dump params
