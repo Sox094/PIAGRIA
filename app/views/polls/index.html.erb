@@ -24,6 +24,14 @@
                         <b>Question <%=i+1  %> :</b><%= Question.where(formulaire_id: @formulaire)[i].nom.html_safe %>
                         <!-- On récupère le nb de question et on display n fois -->
                         <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire)[i]).length  %> réponses
+                        
+                        
+                        <% @polls.select(:created_at).where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).as_json(only: [:created_at]).uniq{|x| x.to_s} %> 
+                        
+                        <% @NbRepondant = @polls.select(:created_at).where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).as_json(only: [:created_at]).uniq{|x| x.to_s}.length %>
+
+                        <%= @NbRepondant%> répondants
+                        <% @NbRepondant = 0 %>
                         <i><% @poll_curr = @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]) %></i>
                         <!-- On get tous les résultats de la question en cours -->
                     </div>
@@ -141,6 +149,7 @@ var myChart = new Chart(ctx, {
 </br></br>
 <ul class="pager">
     <li class="Retour"><%= link_to 'Voir tous les formulaires', formulaires_path %> </li>
+        <li class="Csv"><%= link_to 'Télécharger les données en .csv ', formulaire_polls_path(format: "csv") %> </li>
     
 </ul>
 </br></br>
