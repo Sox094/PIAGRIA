@@ -15,11 +15,16 @@
                               <i class="fa fa-question-circle-o"  
                               title="Choix multiple : Réponse simple : Champ libre (max, 100 caractères) - Plusieurs réponses à la question - Choix simple : Une seule réponse par question ">
                               </i> 
-                  <%= f.number_field :maxmultiplechoice %>
+                  <!-- Ne faire apparaitre cette div que si le select type de question vaut choix multiple-->
+                  <div class="maxmultiplechoice">
+                    <% f.number_field :maxmultiplechoice %>
+                  </div>
                   
-                  <%= f.label :obligatoire, "Réponse obligatoire"  %>
-                  <%= f.check_box :obligatoire %>
-
+                  <!-- Question obligatoire non fonctionnelle-->
+                  <div class="questionobligatoire">
+                    <% f.label :obligatoire, "Réponse obligatoire"  %>
+                    <% f.check_box :obligatoire %>
+                  </div>
               <div class="row">
                 <div class="col-md-4">
                   <%= f.file_field :image, title: "Ajouter une image pour illustrer votre question" %>

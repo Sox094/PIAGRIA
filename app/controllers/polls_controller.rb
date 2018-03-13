@@ -12,9 +12,14 @@ class PollsController < ApplicationController
         @polls = Poll.where(formulaire_id: @formulaire)
         @nbpoll = Poll.where(formulaire_id: @formulaire.id).count
         @nbquestion = Question.where(formulaire_id: @formulaire.id).count
-        @polls397 = @polls.where(question_id: 397).group("nom")
-        @polls398 = @polls.where(question_id: 398).group("nom")
 
+
+        respond_to do |format|
+            format.html
+            format.csv { send_data @polls.to_csv }   #Pour download le csv
+            #format.csv { render text: @polls.to_csv } #Pour afficher le csv
+
+        end
     end
     
     def show
