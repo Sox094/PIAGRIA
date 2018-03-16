@@ -17,13 +17,14 @@
                               </i> 
                   <!-- Ne faire apparaitre cette div que si le select type de question vaut choix multiple-->
                   <div class="maxmultiplechoice">
-                    <% f.number_field :maxmultiplechoice %>
+                    <%= f.label :maxmultiplechoice, "Nombre de réponses maximum"  %>
+                    <%= f.number_field :maxmultiplechoice %>
                   </div>
                   
                   <!-- Question obligatoire non fonctionnelle-->
                   <div class="questionobligatoire">
-                    <% f.label :obligatoire, "Réponse obligatoire"  %>
-                    <% f.check_box :obligatoire %>
+                    <%= f.label :obligatoire, "Réponse obligatoire"  %>
+                    <%= f.check_box :obligatoire %>
                   </div>
               <div class="row">
                 <div class="col-md-4">

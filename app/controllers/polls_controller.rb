@@ -13,6 +13,7 @@ class PollsController < ApplicationController
         @nbpoll = Poll.where(formulaire_id: @formulaire.id).count
         @nbquestion = Question.where(formulaire_id: @formulaire.id).count
 
+        @NbRepondant = 0
 
         respond_to do |format|
             format.html

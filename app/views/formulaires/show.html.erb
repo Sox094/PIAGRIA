@@ -9,6 +9,7 @@
         
             <ol>
                 <% for question in @formulaire.questions %>
+                    <br/>
                     <li> 
                         <%=h question.nom.html_safe %>
                         <div class="row" id="imageshow">
@@ -29,6 +30,7 @@
                         </ul>
                         </li>
                 <% end %>
+                
             </ol>
 
     </div>
@@ -43,5 +45,4 @@
     <li class="Voir les réponses"><%= link_to 'Voir toutes les réponses', formulaire_polls_path(@formulaire) %> </li>
 
 </ul>
-
 
