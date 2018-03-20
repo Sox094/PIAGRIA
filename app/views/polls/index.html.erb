@@ -45,12 +45,12 @@
 
 <script>
 var ctx = document.getElementById("<%="myChart_#{i}"%>").getContext('2d');
-labels= [<% (0..@polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.size-1).each do |rep| %>
-         "<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom")[rep].nom.html_safe %>",
+labels= [<% (0..@polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("id").count.size-1).each do |rep| %>
+         "<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("id")[rep].nom.html_safe %>",
         <% end %>];
         
-j = <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.values%>;
-<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("nom").count.values%>
+j = <%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("id").count.values%>;
+<%= @polls.where(question_id: Question.where(formulaire_id: @formulaire.id)[i]).group("id").count.values%>
 
 if (<%=  Question.where(formulaire_id: @formulaire)[i].typequestion == 'choix_simple' ||Question.where(formulaire_id: @formulaire)[i].typequestion== 'reponse_courte' %>){
 var myChart = new Chart(ctx, {
