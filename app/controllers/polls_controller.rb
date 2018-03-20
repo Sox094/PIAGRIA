@@ -8,7 +8,7 @@ class PollsController < ApplicationController
         @formulaire = Formulaire.find(params[:formulaire_id])
         @questions = @formulaire.questions
         
-        @polls = @formulaire.polls.order("created_at DESC")
+        @polls = @formulaire.polls.order(:created_at).reverse_order
         @polls_nom = @polls.select(:nom)
         @polls = Poll.where(formulaire_id: @formulaire)
         @nbpoll = Poll.where(formulaire_id: @formulaire.id).count
