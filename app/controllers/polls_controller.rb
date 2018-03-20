@@ -9,7 +9,7 @@ class PollsController < ApplicationController
         @questions = @formulaire.questions
         
         @polls = @formulaire.polls.order(:created_at).reverse_order
-        @polls_nom = @polls.select("polls.*")
+        @polls_nom = @formulaire.polls.select("polls.*")
         @polls = Poll.where(formulaire_id: @formulaire)
         @nbpoll = Poll.where(formulaire_id: @formulaire.id).count
         @nbquestion = Question.where(formulaire_id: @formulaire.id).count
