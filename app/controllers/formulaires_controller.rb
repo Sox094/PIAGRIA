@@ -120,30 +120,30 @@ def destroy
     end
 end
 
-private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_formulaire
-      @formulaire = Formulaire.find(params[:id])
-      @question = @formulaire.questions
 
-    end
+    # Use callbacks to share common setup or constraints between actions.
+def set_formulaire
+   @formulaire = Formulaire.find(params[:id])
+   @question = @formulaire.questions
+
+end
     
    
-    def formulaire_params
+def formulaire_params
           params.require(:formulaire).permit(:name, :description, 
                   questions_attributes: [:id, :nom, :typequestion, :image, :maxmultiplechoice, :obligatoire, '_destroy', 
                       answers_attributes:[:id, :content,'_destroy']]) if params[:formulaire]
           
           #puts YAML::dump params
-    end
+end
     
-    def require_same_user 
+def require_same_user 
       if current_user.id != @formulaire.user_id
         flash[:danger] = "Vous n'avez pas les droits"
       end
-    end
+end
     
-    def your polls
-    end
+def your polls
+end
     
 end
